@@ -8,6 +8,7 @@ import { EQUIPMENT_DATA } from '../data/equipmentData';
 import { Machinery, QuoteItem } from '../types';
 import { ShieldCheck, Layers, Settings, CircleAlert, Plus, Check, Info, Video, Play, Phone } from 'lucide-react';
 import MachineryVideoModal from './MachineryVideoModal';
+import { handleImageError } from '../utils/imageFallback';
 
 interface EquipmentCatalogProps {
   onAddToQuote: (item: QuoteItem) => void;
@@ -147,6 +148,7 @@ export default function EquipmentCatalog({ onAddToQuote, addedItems, initialCate
                     alt={item.name} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
+                    onError={(e) => handleImageError(e)}
                   />
                   
                   {/* Brand badge */}

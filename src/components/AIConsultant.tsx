@@ -21,6 +21,7 @@ import {
   Loader2,
   Info
 } from 'lucide-react';
+import { handleImageError, DEFAULT_LABOR_FALLBACK } from '../utils/imageFallback';
 
 interface AIConsultantProps {
   onAddToQuote: (item: QuoteItem) => void;
@@ -398,6 +399,7 @@ export default function AIConsultant({ onAddToQuote, addedItems, isLightMode = f
                         src="/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg" 
                         alt="Engineer Emmanuel" 
                         className="w-14 h-14 object-cover border border-amber-500/60 shadow-sm shrink-0"
+                        onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                       />
                       <div>
                         <span className="text-[8.5px] font-mono font-bold text-amber-500 uppercase tracking-widest block">

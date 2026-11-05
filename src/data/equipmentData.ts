@@ -25,7 +25,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 1450000,
     salesPriceNgn: 285000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_boom_pump_1780289808297.png',
+    image: '/assets/images/sany_boom_pump_1780289808297.png',
     videoUrl: 'https://www.youtube.com/embed/5U_74nI_2U0',
     features: [
       'Active Boom Vibration Reduction (reduces fatigue by 50%)',
@@ -51,7 +51,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 950000,
     salesPriceNgn: 195000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_line_pump_1780289828457.png',
+    image: '/assets/images/sany_line_pump_1780289828457.png',
     videoUrl: 'https://www.youtube.com/embed/fE39O_9E57M',
     features: [
       'Truck-mounted agility with quick horizontal pipeline couplings',
@@ -77,7 +77,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 680000,
     salesPriceNgn: 89000000,
     availability: 'Available',
-    image: '/src/assets/images/atabey_trailer_1780289846185.png',
+    image: '/assets/images/atabey_trailer_1780289846185.png',
     videoUrl: 'https://www.youtube.com/embed/1v0s1Ems9Kk',
     features: [
       'Compact structure towable on loose sand terrains',
@@ -103,7 +103,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 450000,
     salesPriceNgn: 72000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_trailer_pump_1780289861283.png',
+    image: '/assets/images/sany_trailer_pump_1780289861283.png',
     videoUrl: 'https://www.youtube.com/embed/W-E0L-Nf5m8',
     features: [
       'Dual-power system capability',
@@ -131,7 +131,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 380000,
     salesPriceNgn: 115000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_excavator_sy215c_1793851331207.jpg',
+    image: '/assets/images/sany_excavator_sy215c_1793851331207.jpg',
     videoUrl: 'https://www.youtube.com/embed/T9d1SgX85r4',
     features: [
       'Advanced dynamic optimization matching control system (DOMCS)',
@@ -157,7 +157,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 650000,
     salesPriceNgn: 198000000,
     availability: 'Leased',
-    image: '/src/assets/images/sany_excavator_sy365h_1793851348308.jpg',
+    image: '/assets/images/sany_excavator_sy365h_1793851348308.jpg',
     videoUrl: 'https://www.youtube.com/embed/Y0D8Ym5SgK4',
     features: [
       'Heavy duty undercarriage for structural granite tasks',
@@ -185,7 +185,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 950000,
     salesPriceNgn: 185000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_crane_stc500_1793851361061.jpg',
+    image: '/assets/images/sany_crane_stc500_1793851361061.jpg',
     videoUrl: 'https://www.youtube.com/embed/_K-fA-69Mfk',
     features: [
       'U-shaped high-strength tensile steel boom',
@@ -213,7 +213,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 1600000,
     salesPriceNgn: 410000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_drilling_rig_1780289790352.png',
+    image: '/assets/images/sany_drilling_rig_1780289790352.png',
     videoUrl: 'https://www.youtube.com/embed/8KPr7A0-csk',
     features: [
       'High stability heavy duty rotary structural chassis',
@@ -241,7 +241,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 280000,
     salesPriceNgn: 58000000,
     availability: 'Available',
-    image: '/src/assets/images/sany_roller_ssr120_1793851374589.jpg',
+    image: '/assets/images/sany_roller_ssr120_1793851374589.jpg',
     videoUrl: 'https://www.youtube.com/embed/jD6nE-198u8',
     features: [
       'Optimized drum vibration control (increases efficiency)',
@@ -267,7 +267,7 @@ export const EQUIPMENT_DATA: Machinery[] = [
     dailyRateNgn: 1300000,
     salesPriceNgn: 320000000,
     availability: 'Sourcing',
-    image: '/src/assets/images/sany_reach_stacker_1780289875670.png',
+    image: '/assets/images/sany_reach_stacker_1780289875670.png',
     videoUrl: 'https://www.youtube.com/embed/WdAt_6ZtZio',
     features: [
       'Dynamic anti-rollover protection technology',

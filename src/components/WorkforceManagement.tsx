@@ -8,6 +8,7 @@ import { WORKFORCE_DATA, ENGINEER_EMMANUEL_PROFILE } from '../data/workforceData
 import { WorkforcePersonnel } from '../types';
 import { Award, Wrench, ShieldCheck, CheckCircle2, Star, Sparkles, Truck, PhoneCall, ChevronRight, Layers, HardHat } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { handleImageError, DEFAULT_LABOR_FALLBACK } from '../utils/imageFallback';
 
 interface WorkforceManagementProps {
   onAddToQuote: (item: {
@@ -215,6 +216,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                         alt={`Engineer Emmanuel - ${currentRole.title}`}
                         className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
                         referrerPolicy="no-referrer"
+                        onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
 
@@ -250,6 +252,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                             alt={r.title} 
                             className="w-full h-full object-cover"
                             referrerPolicy="no-referrer"
+                            onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                           />
                         </button>
                       ))}
@@ -318,9 +321,9 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                           const leadPerson = WORKFORCE_DATA.find(p => p.id === 'wf-engr-emmanuel-lead') || WORKFORCE_DATA[0];
                           handleBooking(leadPerson);
                         }}
-                        className="bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-6 py-3 font-black text-xs uppercase tracking-widest inline-flex items-center gap-2 transition-all cursor-pointer shadow-lg active:scale-95 rounded-lg whitespace-nowrap"
+                        className="w-full sm:w-auto bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-6 py-3 font-black text-xs uppercase tracking-widest inline-flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg active:scale-95 rounded-lg text-center"
                       >
-                        <HardHat className="w-4 h-4" />
+                        <HardHat className="w-4 h-4 shrink-0" />
                         <span>Deploy Engineer Emmanuel (₦95,000 / Day)</span>
                       </button>
 
@@ -328,13 +331,13 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                         href="https://wa.me/2348063342947?text=Hello%20Clasqo,%20I%20would%20like%20to%20request%20Engineer%20Emmanuel%20for%20our%20construction%20project%20supervision%20and%20line%20pump%20setup."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`border px-5 py-3 font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-all cursor-pointer rounded-lg whitespace-nowrap ${
+                        className={`w-full sm:w-auto border px-5 py-3 font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 transition-all cursor-pointer rounded-lg text-center ${
                           isLightMode 
                             ? 'border-neutral-300 text-neutral-800 hover:bg-neutral-100' 
                             : 'border-[#1E2E5B] text-neutral-300 hover:bg-[#121c3b] hover:text-white'
                         }`}
                       >
-                        <PhoneCall className="w-4 h-4 text-emerald-400" />
+                        <PhoneCall className="w-4 h-4 text-emerald-400 shrink-0" />
                         <span>Direct Field Dispatch WhatsApp</span>
                       </a>
                     </div>
@@ -384,6 +387,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                       alt={person.name}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-300"
+                      onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
@@ -529,6 +533,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                     src={selectedPersonnel.image}
                     alt={selectedPersonnel.name}
                     className="w-16 h-16 rounded-xl object-cover border border-slate-200 dark:border-slate-700"
+                    onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                   />
                   <div>
                     <h2 className="text-xl font-bold text-slate-900 dark:text-white">{selectedPersonnel.name}</h2>
@@ -640,6 +645,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
                   src={activeVideoModal.image}
                   alt={activeVideoModal.name}
                   className="w-full h-full object-cover opacity-60"
+                  onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-center p-6 space-y-3">
                   <div className="w-16 h-16 rounded-full bg-amber-500/90 text-slate-950 flex items-center justify-center shadow-xl animate-pulse">

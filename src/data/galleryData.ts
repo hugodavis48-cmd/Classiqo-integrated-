@@ -26,7 +26,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Zero Blockage Rate', value: '99.8%' },
       { label: 'Safety Record', value: 'Zero LTI' }
     ],
-    image: '/src/assets/images/gallery_eko_atlantic_1793853656107.jpg',
+    image: '/assets/images/gallery_eko_atlantic_1793853656107.jpg',
     description: 'A benchmark maritime civil engineering pour in West Africa. Required continuous marine-grade C40/50 sulfate-resistant concrete pumping to anchor deep coastal sea-wall abutments and high-rise core foundations.',
     tag: 'Maritime Civil Engineering',
     keyHighlight: 'Continuous 18-hour monolithic pour completed with zero line halts.'
@@ -51,7 +51,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Daily Delivery', value: '850 m³/day' },
       { label: 'Pumping Pressure', value: '110 Bar' }
     ],
-    image: '/src/assets/images/gallery_marina_viaduct_1793853657393.jpg',
+    image: '/assets/images/gallery_marina_viaduct_1793853657393.jpg',
     description: 'Precision elevated viaduct bridge casting above active marine traffic in Lagos Lagoon. Required dual-stage pumping manifolds to distribute C50 high-early-strength concrete to pier heads without closing waterway channels.',
     tag: 'Transit Infrastructure',
     keyHighlight: 'Awarded Infrastructure Project of the Year for zero lagoon waterway disruption.'
@@ -76,7 +76,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Concrete Grade', value: 'C60 Self-Compacting' },
       { label: 'Riser Pressure', value: '125 Bar' }
     ],
-    image: '/src/assets/images/service_highrise_pumping_1793852367412.jpg',
+    image: '/assets/images/service_highrise_pumping_1793852367412.jpg',
     description: 'Ultra-luxury waterfront development with demanding architectural finishes. Utilized self-compacting concrete pumped through our Turkey-sourced twin-wall induction pipes to prevent internal honeycombing.',
     tag: 'High-Rise Vertical Pumping',
     keyHighlight: 'Achieved rapid 7-day floor turnarounds without hydraulic pressure loss.'
@@ -101,7 +101,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Pile Diameters', value: '800mm - 1200mm' },
       { label: 'Load Capacity', value: '4,500 kN' }
     ],
-    image: '/src/assets/images/service_bored_piling_1793852380230.jpg',
+    image: '/assets/images/service_bored_piling_1793852380230.jpg',
     description: 'Heavy foundation piles carrying multi-ton container crane rail tracks. Installed deep foundation shafts penetrating through unstable marshland to firm sandstone stratum.',
     tag: 'Deep Bored Foundation Piling',
     keyHighlight: 'Passed 100% of ultrasonic cross-hole sonic logging integrity tests.'
@@ -126,7 +126,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Casting Duration', value: '6 Continuous Days' },
       { label: 'Compressive Strength', value: '45 MPa @ 28 Days' }
     ],
-    image: '/src/assets/images/service_slab_casting_1793852352746.jpg',
+    image: '/assets/images/service_slab_casting_1793852352746.jpg',
     description: 'Precision industrial warehouse floor built for automated high-bay narrow-aisle forklifts. Our skilled finisher crew burnished every square meter to mirror finish.',
     tag: 'Commercial Slab Casting',
     keyHighlight: 'Exceeded international ASTM floor flatness requirements.'
@@ -151,7 +151,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
       { label: 'Grout Injected', value: '3,800 m³' },
       { label: 'Execution Speed', value: '3 Weeks Ahead of Schedule' }
     ],
-    image: '/src/assets/images/service_civil_retaining_1793852394517.jpg',
+    image: '/assets/images/service_civil_retaining_1793852394517.jpg',
     description: 'High-speed civil embankment stabilization executed overnight to safeguard the primary arterial ramp connecting mainland Lagos to the maritime ports.',
     tag: 'Civil Retaining & Earthworks',
     keyHighlight: 'Completed without interrupting daytime commercial container freight.'

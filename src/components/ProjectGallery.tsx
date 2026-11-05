@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { GALLERY_PROJECTS } from '../data/galleryData';
 import { GalleryProject } from '../types';
+import { handleImageError, DEFAULT_GALLERY_FALLBACK } from '../utils/imageFallback';
 
 interface ProjectGalleryProps {
   onNavigateToQuote?: () => void;
@@ -108,6 +109,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                     alt={project.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
+                    onError={(e) => handleImageError(e, DEFAULT_GALLERY_FALLBACK)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -196,6 +198,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                   src={activeProjectModal.image}
                   alt={activeProjectModal.title}
                   className="w-full h-full object-cover"
+                  onError={(e) => handleImageError(e, DEFAULT_GALLERY_FALLBACK)}
                 />
               </div>
 
@@ -241,7 +244,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               </div>
 
               {/* Modal Bottom CTA */}
-              <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
                 <div className="text-xs text-slate-500">
                   Client Partner: <span className="font-semibold text-slate-800 dark:text-slate-200">{activeProjectModal.client}</span>
                 </div>
@@ -250,7 +253,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                     setActiveProjectModal(null);
                     if (onNavigateToQuote) onNavigateToQuote();
                   }}
-                  className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition-colors whitespace-nowrap shadow-md text-xs sm:text-sm"
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition-colors text-center shadow-md text-xs sm:text-sm cursor-pointer"
                 >
                   Configure Quote for Similar Project
                 </button>

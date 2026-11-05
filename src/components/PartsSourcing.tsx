@@ -7,18 +7,26 @@ import React, { useState } from 'react';
 import { PARTS_DATA } from '../data/partsData';
 import { TechnicalPart, QuoteItem } from '../types';
 import { Globe, FileSpreadsheet, Ruler, Layers, ShieldCheck, Check, Plus, AlertCircle, Search } from 'lucide-react';
+import { handleImageError, DEFAULT_PARTS_FALLBACK, DEFAULT_LABOR_FALLBACK } from '../utils/imageFallback';
 
 interface PartsSourcingProps {
   onAddToQuote: (item: QuoteItem) => void;
   addedItems: QuoteItem[];
   isLightMode?: boolean;
+  initialCategory?: string;
 }
 
-export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = false }: PartsSourcingProps) {
+export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = false, initialCategory }: PartsSourcingProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<
     'all' | 'pipes' | 'hoses' | 'couplings' | 'elbows' | 'hardware' | 'chemicals' | 'ppe'
-  >('all');
+  >((initialCategory as any) || 'all');
+
+  React.useEffect(() => {
+    if (initialCategory) {
+      setSelectedCategory(initialCategory as any);
+    }
+  }, [initialCategory]);
   
   // High pressure custom pipeline estimator state
   const [targetLengthMeters, setTargetLengthMeters] = useState(60);
@@ -102,10 +110,11 @@ export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = 
             }`}>
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/10 to-transparent z-10" />
               <img 
-                src="/src/assets/images/concrete_pump_pipes_1780284052994.png" 
+                src="/assets/images/concrete_pump_pipes_1780284052994.png" 
                 alt="Clasqo Sourced twin-wall concrete pipelines" 
                 className="w-full h-[300px] sm:h-[350px] object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
+                onError={(e) => handleImageError(e, DEFAULT_PARTS_FALLBACK)}
               />
               <div className="absolute top-4 left-4 z-20 bg-amber-500 text-neutral-950 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-none shadow">
                 Direct Sourcing Gateway
@@ -320,6 +329,7 @@ export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = 
                   alt="Engineer Emmanuel - Field Line Pump Setup & Clamping"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
                 <span className="absolute top-3 left-3 bg-amber-500 text-neutral-950 text-[9px] font-mono font-black uppercase px-2.5 py-1 tracking-wider shadow">
@@ -461,6 +471,7 @@ export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = 
                           alt={part.name} 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e, DEFAULT_PARTS_FALLBACK)}
                         />
                       </div>
                     )}

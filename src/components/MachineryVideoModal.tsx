@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Play, Pause, RotateCcw, Volume2, VolumeX, Eye, Info, Activity, ShieldCheck, Video, HelpCircle } from 'lucide-react';
 import { Machinery } from '../types';
+import { handleImageError } from '../utils/imageFallback';
 
 interface MachineryVideoModalProps {
   machinery: Machinery | null;
@@ -174,6 +175,7 @@ export default function MachineryVideoModal({ machinery, onClose }: MachineryVid
                   alt={machinery.name} 
                   className={`absolute inset-0 w-full h-full object-cover opacity-35 ${isPlaying ? 'brightness-95 contrast-105 saturate-120' : 'brightness-50 grayscale transition-all'}`}
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleImageError(e)}
                 />
                 
                 {/* Immersive HUD Overlay Grid */}

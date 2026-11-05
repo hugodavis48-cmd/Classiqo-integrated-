@@ -82,7 +82,7 @@ export const INVESTMENT_PACKAGES: InvestmentPackage[] = [
       'Opt-in capital re-investment compound option'
     ],
     riskMitigation: 'Underwritten by active Lagos construction charter agreements with BCL and Lafarge Africa',
-    image: '/src/assets/images/concrete_pump_pipes_1780284052994.png'
+    image: '/assets/images/concrete_pump_pipes_1780284052994.png'
   },
   {
     id: 'pkg-growth-equipment-fund',
@@ -109,7 +109,7 @@ export const INVESTMENT_PACKAGES: InvestmentPackage[] = [
     ],
     riskMitigation: 'Escrow replacement fund covering 100% of wear parts and engine overhaul cycles',
     isPopular: true,
-    image: '/src/assets/images/sany_excavator_sy215c_1793851331207.jpg'
+    image: '/assets/images/sany_excavator_sy215c_1793851331207.jpg'
   },
   {
     id: 'pkg-executive-boom-co-ownership',
@@ -135,7 +135,7 @@ export const INVESTMENT_PACKAGES: InvestmentPackage[] = [
       'VIP access to major infrastructure project site inaugurations'
     ],
     riskMitigation: 'Backed by binding multi-year concrete supply agreements at Eko Atlantic and Lekki Free Zone',
-    image: '/src/assets/images/sany_boom_pump_1780289808297.png'
+    image: '/assets/images/sany_boom_pump_1780289808297.png'
   },
   {
     id: 'pkg-institutional-syndicate',
@@ -161,7 +161,7 @@ export const INVESTMENT_PACKAGES: InvestmentPackage[] = [
       'First-right-of-refusal on all incoming new machinery procurement lots'
     ],
     riskMitigation: 'Sovereign grade counterparty agreements, bank guarantees, and full international Lloyd\'s marine & transit insurance',
-    image: '/src/assets/images/investor_package_executive_1793855236803.jpg'
+    image: '/assets/images/investor_package_executive_1793855236803.jpg'
   }
 ];
 

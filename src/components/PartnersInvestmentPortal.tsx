@@ -11,6 +11,7 @@ import {
   InvestmentPackage, 
   MachineryCoOwnedAsset 
 } from '../data/investmentData';
+import { handleImageError } from '../utils/imageFallback';
 import { 
   DollarSign, 
   TrendingUp, 
@@ -155,10 +156,11 @@ export const PartnersInvestmentPortal: React.FC<PartnersInvestmentPortalProps> =
             {/* Right Hero Image Column */}
             <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full overflow-hidden bg-slate-900">
               <img
-                src="/src/assets/images/investor_portal_hero_1793855237606.jpg"
+                src="/assets/images/investor_portal_hero_1793855237606.jpg"
                 alt="Clasqo Machinery Executive Investment Review"
                 className="w-full h-full object-cover filter brightness-95"
                 referrerPolicy="no-referrer"
+                onError={(e) => handleImageError(e)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 space-y-1">
@@ -244,7 +246,7 @@ export const PartnersInvestmentPortal: React.FC<PartnersInvestmentPortalProps> =
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
                   Contract Tenure:
                 </label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[6, 12, 24, 36].map((months) => (
                     <button
                       key={months}
@@ -303,7 +305,7 @@ export const PartnersInvestmentPortal: React.FC<PartnersInvestmentPortalProps> =
                 </div>
 
                 {/* Primary Output Numbers */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60">
                     <span className="text-[11px] text-slate-400 uppercase font-semibold block">
                       {payoutSchedule === 'Monthly' ? 'Monthly USD Return' : 'Quarterly USD Return'}
@@ -423,6 +425,7 @@ export const PartnersInvestmentPortal: React.FC<PartnersInvestmentPortalProps> =
                       alt={pkg.name}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
+                      onError={(e) => handleImageError(e)}
                     />
                   </div>
 
@@ -555,10 +558,11 @@ export const PartnersInvestmentPortal: React.FC<PartnersInvestmentPortalProps> =
 
             <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950">
               <img
-                src="/src/assets/images/machinery_asset_management_1793855237921.jpg"
+                src="/assets/images/machinery_asset_management_1793855237921.jpg"
                 alt="Clasqo Certified Machinery Inspection Facility"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                onError={(e) => handleImageError(e)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-white">

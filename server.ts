@@ -172,6 +172,13 @@ async function startServer() {
     }
   });
 
+  // Static asset serving: ensure both /assets and /src/assets always resolve directly to static files
+  const publicAssetsPath = path.join(process.cwd(), 'public/assets');
+  const srcAssetsPath = path.join(process.cwd(), 'src/assets');
+  app.use('/assets', express.static(publicAssetsPath));
+  app.use('/src/assets', express.static(srcAssetsPath));
+  app.use('/src/assets', express.static(publicAssetsPath));
+
   // Local static asset server or Vite compilation handler
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

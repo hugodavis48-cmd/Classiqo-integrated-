@@ -21,6 +21,7 @@ import {
   AlertCircle, 
   Sparkles 
 } from 'lucide-react';
+import { handleImageError, DEFAULT_LABOR_FALLBACK } from '../utils/imageFallback';
 
 interface CastingAndPilingServicesProps {
   onAddToQuote: (item: QuoteItem) => void;
@@ -46,7 +47,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
     floor: {
       title: 'Full Floor & Slab Casting',
       tagline: 'High-yield horizontal slab pouring for warehouses, commercial yards, and industrial floors.',
-      image: '/src/assets/images/service_slab_casting_1793852352746.jpg',
+      image: '/assets/images/service_slab_casting_1793852352746.jpg',
       baseRatePerDay: 850000,
       description: 'Clasqo dispatches Sany High-Volume Boom Pumps or Sany Truck-mounted Line Pumps with a fully equipped team including pump technicians, pipeline couplers, and ground dispatch directors. Perfect for marshy sand zones of Ibeju-Lekki to guarantee rapid, high-pressure concrete spread before setting.',
       crewSize: 6,
@@ -61,7 +62,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
     highrise: {
       title: 'High-Rise Vertical Casting',
       tagline: 'Complex vertical pumping logistics matching heavy tower design configurations.',
-      image: '/src/assets/images/service_highrise_pumping_1793852367412.jpg',
+      image: '/assets/images/service_highrise_pumping_1793852367412.jpg',
       baseRatePerDay: 1350000,
       description: 'Engineered specifically for sky-facing delivery. Utilizes our premium Sany 56m Truck-Mounted Concrete Boom Pump combined with specialized climbing pipeline conduits. Our operators work in sync with crane signals to lay high-strength structural concrete on high floors with millimeter accuracy.',
       crewSize: 8,
@@ -76,7 +77,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
     piling: {
       title: 'Bored Piling & Foundation Drilling',
       tagline: 'High stability structural pile foundations engineered for tidal Lekki swamp strata.',
-      image: '/src/assets/images/service_bored_piling_1793852380230.jpg',
+      image: '/assets/images/service_bored_piling_1793852380230.jpg',
       baseRatePerDay: 1950000,
       description: 'Our specialized piling department dispatches Sany SR285 Rotary Drilling Rigs along with geotechnical excavation supervisors, mud-circulation pump engineers, and structural cage lower crews. We drill and cast durable load-bearing concrete pillars deep through sandy sediment to solid bedrock.',
       crewSize: 10,
@@ -91,7 +92,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
     general: {
       title: 'Structural Retaining Walls & Civil Castings',
       tagline: 'Integrated engineering castings for bridge piers, box culverts, and structural retaining structures.',
-      image: '/src/assets/images/service_civil_retaining_1793852394517.jpg',
+      image: '/assets/images/service_civil_retaining_1793852394517.jpg',
       baseRatePerDay: 950000,
       description: 'Tailored for specialized public infrastructure, civil roads, drainage systems, or heavy ocean retaining walls. Clasqo manages the entire machinery matching, site permitting, delivery pipeline layouts, and operator mobilization, delivering smooth casting schedules under harsh Lagos weather.',
       crewSize: 5,
@@ -239,6 +240,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
                           alt={data.title} 
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e)}
                         />
                       </div>
 
@@ -298,6 +300,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
                   alt="Engineer Emmanuel - On-Deck Pour Coordination"
                   className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
                   <span className="bg-amber-500 text-neutral-950 font-black text-[8px] px-1.5 py-0.2 uppercase w-max">
@@ -343,6 +346,7 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
                     alt={activeService.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
+                    onError={(e) => handleImageError(e)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-4">
                     <div className="flex items-center gap-2 mb-1">

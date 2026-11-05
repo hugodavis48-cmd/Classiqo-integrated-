@@ -69,7 +69,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'Lagos & Lekki Free Zone',
     bio: '14+ years managing massive high-rise casting, deep bored piling foundations, and complex hydraulic structural pours. Supervised over 120,000 m³ of concrete delivery across Victoria Island and Ikoyi towers.',
     skills: ['Concrete Mix Design Auditing', 'Deep Foundation QA/QC', 'Pour Logistics Coordination', 'BIM / AutoCAD Execution'],
-    image: '/src/assets/images/labor_site_engineer_1793853608452.jpg',
+    image: '/assets/images/labor_site_engineer_1793853608452.jpg',
     equipmentSpecialization: ['Sany 48m & 56m Boom Pumps', 'Bauer BG30 Drilling Rigs', 'Concrete Batch Plants'],
     featuredReview: {
       client: 'Levitikal Construction Ltd',
@@ -97,7 +97,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'Lagos Island & Mainland',
     bio: 'Expert certified concrete pump operator with over 8,000 incident-free machine operational hours. Master of intricate 5-section RZ boom deployment in restricted urban sites and congested civil roadworks.',
     skills: ['Radio Remote Boom Maneuvering', 'Emergency Line Depressurization', 'S-Valve Timing Adjustment', 'Daily Preventive Hydraulics'],
-    image: '/src/assets/images/labor_machine_operator_1793853593127.jpg',
+    image: '/assets/images/labor_machine_operator_1793853593127.jpg',
     equipmentSpecialization: ['Sany SY5313THB Boom Pumps', 'Zoomlion 43X-5RZ', 'Atabey Trailer Pumps', 'Schwing Stetter Lines'],
     featuredReview: {
       client: 'Business Contracting Limited (BCL)',
@@ -125,7 +125,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'Eko Atlantic & Greater Lagos',
     bio: 'Dedicated civil health and safety manager with a proven record of zero lost-time injuries (LTI) across maritime foundation and high-rise structural casting projects. Specializes in crane radius safety and high-pressure concrete pipe securing.',
     skills: ['Hazard Identification & Risk Assessment (HIRA)', 'Pipeline Pressure Bleed Safety Protocols', 'PPE Site Audits & Compliance', 'Emergency Evacuation Drills'],
-    image: '/src/assets/images/labor_safety_officer_1793853654932.jpg',
+    image: '/assets/images/labor_safety_officer_1793853654932.jpg',
     equipmentSpecialization: ['High-Pressure Hydraulic Pipelines', 'Mobile Crawler Cranes', 'Bored Piling Rigs', 'Tidal Marine Works'],
     featuredReview: {
       client: 'SPG Nigeria Infrastructure',
@@ -153,7 +153,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'Lagos & Ogun Industrial Corridor',
     bio: 'Skilled concrete casting foreman commanding high-speed screed leveling, power float polishing, and tremie column compaction. Expert at achieving FF50/FL35 floor flatness specifications on logistics warehouses.',
     skills: ['Laser Screeding', 'Power Trowel Burnishing', 'Tremie Pipe Vibratory Compaction', 'Expansion Joint Scoring'],
-    image: '/src/assets/images/labor_concrete_finisher_1793853655899.jpg',
+    image: '/assets/images/labor_concrete_finisher_1793853655899.jpg',
     equipmentSpecialization: ['Ride-on Power Trowels', 'Tremie Hoppers', 'High-Frequency Needle Vibrators', 'Bull Floats'],
     featuredReview: {
       client: 'Lafarge Africa Partnered Contractor',
@@ -181,7 +181,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'All Lagos Project Sites',
     bio: 'Dedicated rapid-response site turnaround crew. Handles post-pour pipeline blowout, sponge-ball water washing, hopper descaling, slurry settling pond maintenance, and environmental sediment controls.',
     skills: ['Pipeline Sponge-Ball Blowing', 'Hopper & Delivery Cylinder Descaling', 'Concrete Slurry Neutralization', 'Environmental Runoff Containment'],
-    image: '/src/assets/images/labor_machine_operator_1793853593127.jpg',
+    image: '/assets/images/labor_machine_operator_1793853593127.jpg',
     equipmentSpecialization: ['High-Pressure 500-Bar Washers', 'Air Blowout Caps', 'Slurry Vacuum Units', 'Sediment Traps'],
     featuredReview: {
       client: 'BCL Construction',
@@ -207,7 +207,7 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     location: 'Lagos Island, Lekki & Epe Axis',
     bio: 'Disciplined industrial asset protection squad protecting heavy machinery, high-value copper cables, diesel fuel bowsers, and steel reinforcement stocks. 24/7 manned access gate control and perimeter surveillance.',
     skills: ['Gate Log Entry Verification', 'Diesel Bower Anti-Siphon Monitoring', 'Night Perimeter Patrol', 'Conflict De-escalation'],
-    image: '/src/assets/images/labor_safety_officer_1793853654932.jpg',
+    image: '/assets/images/labor_safety_officer_1793853654932.jpg',
     equipmentSpecialization: ['CCTV Remote Watch Towers', 'Handheld Metal Detectors', 'Thermal Night Vision Monoculars', 'Guard Tour Wand Verification'],
     featuredReview: {
       client: 'SPG Nigeria Projects',

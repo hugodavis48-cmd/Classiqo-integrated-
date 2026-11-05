@@ -18,7 +18,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Genuine Zoomlion 3-meter metal casting pipe with 148mm heavy-duty forged collar ends. Inner wall induction quenched for high abrasive pumping across high-rise and heavy civil casting.',
     priceNgn: 195000,
-    image: '/src/assets/images/concrete_pump_pipes_1780284052994.png',
+    image: '/assets/images/concrete_pump_pipes_1780284052994.png',
     compatibility: 'Zoomlion & Sany Boom & Trailer Pumps'
   },
   {
@@ -32,7 +32,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'DN125 twin-walled seamless high pressure concrete straight tube. Specially hardened inner casing offering up to 50,000m³ service life performance. Features standard 148mm flare collars.',
     priceNgn: 185000,
-    image: '/src/assets/images/concrete_pump_pipes_1780284052994.png',
+    image: '/assets/images/concrete_pump_pipes_1780284052994.png',
     compatibility: 'Boom, Mobile Line & Stationary Pumps'
   },
   {
@@ -46,7 +46,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'DN125 single-walled delivery pipe designed for ground line setups or standard trailer output. Heat-treated flange connections resist heavy wear.',
     priceNgn: 135000,
-    image: '/src/assets/images/concrete_pump_pipes_1780284052994.png',
+    image: '/assets/images/concrete_pump_pipes_1780284052994.png',
     compatibility: 'Stationary Trailer & Ground Pipeline'
   },
 
@@ -62,7 +62,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Heavy-duty 4-meter flexible end hose with vulcanized hardened steel flange collars. Resists kinking and handles aggressive aggregate velocity at the boom tip or column casting zone.',
     priceNgn: 210000,
-    image: '/src/assets/images/part_flexible_hose_1793853552157.jpg',
+    image: '/assets/images/part_flexible_hose_1793853552157.jpg',
     compatibility: 'Boom Pump Tips & Tremie Pouring'
   },
   {
@@ -76,7 +76,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Lightweight flexible delivery hose designed for easy manual handling by site crews during pile top grouting and tight slab casting operations.',
     priceNgn: 175000,
-    image: '/src/assets/images/part_flexible_hose_1793853552157.jpg',
+    image: '/assets/images/part_flexible_hose_1793853552157.jpg',
     compatibility: 'Mobile Line & Piling Rigs'
   },
 
@@ -92,7 +92,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Forged toggle bolt snap coupling clamp. Features a safety locking pin and polyurethane sealing ring to completely block concrete slurry leakage. Quick release design allows rapid line maintenance.',
     priceNgn: 42000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'Universal DN125 / 148mm Flanges'
   },
   {
@@ -106,7 +106,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'High-integrity dual-bolt screw coupling designed for permanent high-pressure vertical riser pipelines in multi-story towers. Eliminates surge kick-back.',
     priceNgn: 58000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'High-Rise Vertical Risers & High-Pressure Pumping'
   },
   {
@@ -120,7 +120,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Rugged hammer-drive wedge coupling allowing instantaneous assembly and disassembly on rough site terrains without threaded socket tools.',
     priceNgn: 49000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'Mobile Line Pumps & Civil Ground Pipelines'
   },
 
@@ -136,7 +136,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Cast twin-wall steel elbow offering outstanding abrasion resistance. Extra-thick outer wall on the curvature radius handles massive concrete friction forces.',
     priceNgn: 98000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'Boom Arms, Turntables & Pipeline Corners'
   },
   {
@@ -150,7 +150,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: '45-degree diversion bend minimizing pumping friction and pressure drop when routing pipelines across elevation transitions and bridge viaducts.',
     priceNgn: 85000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'Trailer Pumps, Mobile Lines & Boom Rigs'
   },
   {
@@ -164,7 +164,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Low-angle 35-degree pipe elbow designed to reduce hydrodynamic drag and line surge on long-distance horizontal runs up to 300 meters.',
     priceNgn: 82000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'Long-Distance Ground Line Pumping'
   },
 
@@ -180,7 +180,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'Istanbul Sourcing (7 Days)',
     description: 'Enables quick pipeline redirection and line isolation. Perfect for pouring concrete sequentially in multiple tall columns or blocks from a single ground pump setup.',
     priceNgn: 480000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'High-Rise Riser Manifolds & Split Pour Lines'
   },
   {
@@ -194,7 +194,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'On Order',
     description: 'Hydraulically actuated gate valve designed to shut off high-head vertical concrete columns during pumping halts, preventing backflow and pipe blockage.',
     priceNgn: 920000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'Stationary Trailer Pumps & High-Rise Towers'
   },
 
@@ -210,7 +210,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Tungsten carbide wear plate & companion cutting ring set to fit Sany and Zoomlion concrete trailer/truck pump S-valves. Maximizes pressure sealing and prolongs valve lifecycle.',
     priceNgn: 740000,
-    image: '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
+    image: '/assets/images/part_twinwall_elbow_90_1793852423091.jpg',
     compatibility: 'Sany & Zoomlion Mobile & Trailer S-Valves'
   },
   {
@@ -224,7 +224,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Direct replacement delivery cylinder piston head for stationary trailer pumps and truck-mounted boom pumps. Resists slurry friction, heat, and oil expansion.',
     priceNgn: 115000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'Trailer Pumps & Boom Delivery Cylinders'
   },
   {
@@ -238,7 +238,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Complete pipeline blowout cleaning pack: includes 6 high-density sponge balls (DN125/DN150), quick-lock water/air washout cap, and slurry catch basket.',
     priceNgn: 65000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'Boom Lines, Mobile Lines & Trailer Outlets'
   },
   {
@@ -252,7 +252,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Specially engineered gasket pack matching standard twin-wall coupling flares. Resists mineral oils, hydraulic fluids, and severe high temperature Lagos climate wear.',
     priceNgn: 28000,
-    image: '/src/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
+    image: '/assets/images/part_snap_coupling_clamp_1793852409516.jpg',
     compatibility: 'All DN125 Clamps and Couplings'
   },
 
@@ -268,7 +268,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'High-performance liquid hardening accelerator. Reduces initial set time by up to 60% for fast formwork stripping, precast casting, cold joint avoidance, and urgent tidal revetment works.',
     priceNgn: 85000,
-    image: '/src/assets/images/part_concrete_chemicals_1793853565822.jpg',
+    image: '/assets/images/part_concrete_chemicals_1793853565822.jpg',
     compatibility: 'Ready-mix Trucks, Grout Pumps, Piling Slurry'
   },
   {
@@ -282,7 +282,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Increases concrete slump from 80mm to self-compacting 220mm without segregation. Drastically lowers pumping line friction and prevents pipeline blockages across long boom pours.',
     priceNgn: 92000,
-    image: '/src/assets/images/part_concrete_chemicals_1793853565822.jpg',
+    image: '/assets/images/part_concrete_chemicals_1793853565822.jpg',
     compatibility: 'Pumpable Concrete C30-C60, High-Rise Pumping'
   },
   {
@@ -296,7 +296,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Ensures effortless demolding of steel shutters, aluminum forms, and plywood casings. Leaves architectural concrete surfaces pristine and bubble-free with zero staining.',
     priceNgn: 48000,
-    image: '/src/assets/images/part_concrete_chemicals_1793853565822.jpg',
+    image: '/assets/images/part_concrete_chemicals_1793853565822.jpg',
     compatibility: 'Steel & Aluminum Formwork, Column Moulds'
   },
 
@@ -312,7 +312,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Heavy civil construction safety helmets with adjustable ratchet dial, sweatband, and reflective decals. Engineered for site engineers, machine operators, and casting crews.',
     priceNgn: 45000,
-    image: '/src/assets/images/part_safety_ppe_1793853579021.jpg',
+    image: '/assets/images/part_safety_ppe_1793853579021.jpg',
     compatibility: 'All Construction Sites & Plant Personnel'
   },
   {
@@ -326,7 +326,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Heavy-duty site safety vests featuring walkie-talkie chest clips, reinforced pen slots, dual large tool pockets, and front zip closure for night and daylight visibility.',
     priceNgn: 38000,
-    image: '/src/assets/images/part_safety_ppe_1793853579021.jpg',
+    image: '/assets/images/part_safety_ppe_1793853579021.jpg',
     compatibility: 'Site Traffic Officers, Crew, Field Engineers'
   },
   {
@@ -340,7 +340,7 @@ export const PARTS_DATA: TechnicalPart[] = [
     stockStatus: 'In Stock',
     description: 'Protects pipeline crew and concrete finishers against wet alkaline cement burns, sharp pipe burs, wire ties, and heavy steel coupling pinch points.',
     priceNgn: 32000,
-    image: '/src/assets/images/part_safety_ppe_1793853579021.jpg',
+    image: '/assets/images/part_safety_ppe_1793853579021.jpg',
     compatibility: 'Concrete Casters, Riggers, Pipeline Mechanics'
   }
 ];

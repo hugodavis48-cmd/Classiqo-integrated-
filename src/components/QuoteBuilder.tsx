@@ -862,35 +862,37 @@ export default function QuoteBuilder({
             SPECIFICATION BILL OF QUANTITIES
           </h3>
 
-          <table className="w-full text-left border-collapse border border-zinc-300 mb-6 font-sans">
-            <thead>
-              <tr className="bg-zinc-100 border-b border-zinc-300 font-extrabold text-[10px] text-zinc-800 uppercase">
-                <th className="p-2 border-r border-zinc-300">Scope item details</th>
-                <th className="p-2 text-center border-r border-zinc-300">Unit rate (NGN)</th>
-                <th className="p-2 text-center border-r border-zinc-300">Quantity</th>
-                <th className="p-2 text-center border-r border-zinc-300">Duration</th>
-                <th className="p-2 text-right">Total Charge</th>
-              </tr>
-            </thead>
-            <tbody className="text-[11px]">
-              {addedItems.map((item, idx) => {
-                const days = item.days ? item.days : 1;
-                const totalItemCharge = item.rateOrPrice * item.quantity * days;
-                return (
-                  <tr key={idx} className="border-b border-zinc-200">
-                    <td className="p-2 border-r border-zinc-300 font-bold">{item.name}</td>
-                    <td className="p-2 text-center border-r border-zinc-300 font-mono">{formatNaira(item.rateOrPrice)}</td>
-                    <td className="p-2 text-center border-r border-zinc-300 font-mono">{item.quantity}</td>
-                    <td className="p-2 text-center border-r border-zinc-300 font-mono">{item.days ? `${item.days} Days` : 'N/A'}</td>
-                    <td className="p-2 text-right font-mono font-bold text-zinc-900">{formatNaira(totalItemCharge)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="overflow-x-auto w-full mb-6">
+            <table className="w-full text-left border-collapse border border-zinc-300 font-sans min-w-[500px]">
+              <thead>
+                <tr className="bg-zinc-100 border-b border-zinc-300 font-extrabold text-[10px] text-zinc-800 uppercase">
+                  <th className="p-2 border-r border-zinc-300">Scope item details</th>
+                  <th className="p-2 text-center border-r border-zinc-300">Unit rate (NGN)</th>
+                  <th className="p-2 text-center border-r border-zinc-300">Quantity</th>
+                  <th className="p-2 text-center border-r border-zinc-300">Duration</th>
+                  <th className="p-2 text-right">Total Charge</th>
+                </tr>
+              </thead>
+              <tbody className="text-[11px]">
+                {addedItems.map((item, idx) => {
+                  const days = item.days ? item.days : 1;
+                  const totalItemCharge = item.rateOrPrice * item.quantity * days;
+                  return (
+                    <tr key={idx} className="border-b border-zinc-200">
+                      <td className="p-2 border-r border-zinc-300 font-bold">{item.name}</td>
+                      <td className="p-2 text-center border-r border-zinc-300 font-mono">{formatNaira(item.rateOrPrice)}</td>
+                      <td className="p-2 text-center border-r border-zinc-300 font-mono">{item.quantity}</td>
+                      <td className="p-2 text-center border-r border-zinc-300 font-mono">{item.days ? `${item.days} Days` : 'N/A'}</td>
+                      <td className="p-2 text-right font-mono font-bold text-zinc-900">{formatNaira(totalItemCharge)}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
 
           <div className="flex justify-end font-sans">
-            <div className="w-1/2 space-y-2 border border-zinc-300 p-3 rounded text-[11px]">
+            <div className="w-full sm:w-1/2 space-y-2 border border-zinc-300 p-3 rounded text-[11px]">
               <div className="flex justify-between text-zinc-600">
                 <span>Materials & Rentals Subtotal:</span>
                 <span className="font-mono font-bold text-zinc-900">{formatNaira(rawSubtotal)}</span>

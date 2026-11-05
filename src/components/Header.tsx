@@ -423,9 +423,9 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
 
       </div>
 
-      {/* Mobile Drawer Menu (Collapsible overlay layout) */}
+      {/* Mobile Drawer Menu (Collapsible overlay layout with scrolling for short screens) */}
       {mobileMenuOpen && (
-        <div className={`lg:hidden w-full absolute top-full left-0 right-0 z-40 p-4 shadow-2xl space-y-3 font-sans animate-fade-in border-t transition-colors ${
+        <div className={`lg:hidden w-full absolute top-full left-0 right-0 z-40 p-4 shadow-2xl space-y-3 font-sans animate-fade-in border-t max-h-[calc(100vh-80px)] overflow-y-auto transition-colors ${
           isLightMode ? 'bg-[#FFFFFF] border-neutral-200 text-[#0C122C]' : 'bg-[#080d22] border-[#182747] text-neutral-100'
         }`}>
           
@@ -561,7 +561,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
                   }`}
                 >
                   <span>• Pipeline Parts & Clamps</span>
-                  <span className="text-[7.5px] bg-sky-500/10 text-sky-600 border border-sky-45-0/30 px-1">STAGING</span>
+                  <span className="text-[7.5px] bg-sky-500/10 text-sky-600 border border-sky-500/30 px-1">STAGING</span>
                 </button>
                 <button
                   onClick={() => handleServicesSelect('consultant')}
@@ -580,7 +580,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
           {/* Mobile Direct Link: Skilled Workforce */}
           <button
             onClick={() => triggerDirectNav('workforce')}
-            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none block flex items-center justify-between cursor-pointer ${
+            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none flex items-center justify-between cursor-pointer ${
               activeTab === 'workforce'
                 ? 'bg-amber-500 text-neutral-950 border-amber-500 font-extrabold'
                 : isLightMode
@@ -600,7 +600,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
           {/* Mobile Direct Link: Project Gallery */}
           <button
             onClick={() => triggerDirectNav('gallery')}
-            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none block flex items-center justify-between cursor-pointer ${
+            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none flex items-center justify-between cursor-pointer ${
               activeTab === 'gallery'
                 ? 'bg-amber-500 text-neutral-950 border-amber-500 font-extrabold'
                 : isLightMode
@@ -620,7 +620,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
           {/* Mobile Direct Link: Partner Investment & ROI (USD) */}
           <button
             onClick={() => triggerDirectNav('invest')}
-            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none block flex items-center justify-between cursor-pointer ${
+            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none flex items-center justify-between cursor-pointer ${
               activeTab === 'invest'
                 ? 'bg-amber-500 text-neutral-950 border-amber-500 font-extrabold'
                 : isLightMode
@@ -640,7 +640,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
           {/* Mobile Direct Link: Fleet Admin & Co-Ownership Console */}
           <button
             onClick={() => triggerDirectNav('investor-admin')}
-            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none block flex items-center justify-between cursor-pointer ${
+            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none flex items-center justify-between cursor-pointer ${
               activeTab === 'investor-admin'
                 ? 'bg-amber-500 text-neutral-950 border-amber-500 font-extrabold'
                 : isLightMode
@@ -660,7 +660,7 @@ export default function Header({ onNavChange, activeTab, cartCount, isLightMode,
           {/* Mobile Quote Builder Button */}
           <button
             onClick={() => triggerDirectNav('quote')}
-            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none block flex items-center justify-between cursor-pointer ${
+            className={`w-full text-left px-4 py-3 text-xs font-bold uppercase tracking-widest border transition-all rounded-none flex items-center justify-between cursor-pointer ${
               activeTab === 'quote'
                 ? isLightMode
                   ? 'bg-[#0C122C] text-white border-[#0C122C] font-extrabold'

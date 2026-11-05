@@ -27,6 +27,7 @@ import {
   HardHat
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { handleImageError } from '../utils/imageFallback';
 
 export interface ChatMessage {
   id: string;
@@ -92,7 +93,7 @@ export default function ClasqoLiveSupport({ onNavigateTab, isLightMode = false }
           tag: 'Sany Tier-1 Fleet',
           tab: 'equipment',
           linkText: 'Explore Fleets & Services →',
-          image: '/src/assets/images/sany_boom_pump_1780289808297.png'
+          image: '/assets/images/sany_boom_pump_1780289808297.png'
         }
       }
     ]);
@@ -148,13 +149,13 @@ export default function ClasqoLiveSupport({ onNavigateTab, isLightMode = false }
       let cardImage = data.card?.image;
       if (!cardImage && data.card?.type) {
         if (data.card.type === 'investment') {
-          cardImage = '/src/assets/images/investor_portal_hero_1793855237606.jpg';
+          cardImage = '/assets/images/investor_portal_hero_1793855237606.jpg';
         } else if (data.card.type === 'equipment') {
-          cardImage = '/src/assets/images/sany_boom_pump_1780289808297.png';
+          cardImage = '/assets/images/sany_boom_pump_1780289808297.png';
         } else if (data.card.type === 'service') {
-          cardImage = '/src/assets/images/service_bored_piling_1793852380230.jpg';
+          cardImage = '/assets/images/service_bored_piling_1793852380230.jpg';
         } else if (data.card.type === 'parts') {
-          cardImage = '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg';
+          cardImage = '/assets/images/part_twinwall_elbow_90_1793852423091.jpg';
         } else if (data.card.type === 'labor') {
           cardImage = '/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg';
         }
@@ -407,6 +408,7 @@ export default function ClasqoLiveSupport({ onNavigateTab, isLightMode = false }
                                     alt={msg.card.title} 
                                     className="w-full h-full object-cover"
                                     referrerPolicy="no-referrer"
+                                    onError={(e) => handleImageError(e)}
                                   />
                                   {msg.card.tag && (
                                     <span className="absolute top-1.5 left-1.5 bg-neutral-950/90 text-amber-500 text-[8px] font-mono font-bold px-2 py-0.5 uppercase tracking-wider">

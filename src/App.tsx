@@ -24,10 +24,12 @@ import ClasqoLiveSupport from './components/ClasqoLiveSupport';
 import { QuoteItem } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShieldCheck, Truck, Cpu, Compass, HardHat, PhoneCall, MapPin, Users, Image as ImageIcon, TrendingUp, ArrowRight, Briefcase, DollarSign } from 'lucide-react';
+import { handleImageError, DEFAULT_LABOR_FALLBACK } from './utils/imageFallback';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
   const [equipmentCategory, setEquipmentCategory] = useState<string>('all');
+  const [partsCategory, setPartsCategory] = useState<string>('all');
   const [addedItems, setAddedItems] = useState<QuoteItem[]>([]);
   const [activeLogisticsFee, setActiveLogisticsFee] = useState<{ zone: string; fee: number } | null>(null);
 
@@ -64,9 +66,14 @@ export default function App() {
 
   const handleNavChange = (tab: string, category?: string) => {
     setActiveTab(tab);
-    if (category) {
+    if (tab === 'equipment' && category) {
+      setEquipmentCategory(category);
+    } else if (tab === 'parts' && category) {
+      setPartsCategory(category);
+    } else if (category) {
       setEquipmentCategory(category);
     }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Add Item to QuotationScope
@@ -191,10 +198,11 @@ export default function App() {
                   }`}>
                     <div className="h-44 w-full overflow-hidden relative border-b border-neutral-200 dark:border-neutral-800">
                       <img 
-                        src="/src/assets/images/sany_boom_pump_1780289808297.png" 
+                        src="/assets/images/sany_boom_pump_1780289808297.png" 
                         alt="Sany Leasing & Sales Fleet" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
+                        onError={(e) => handleImageError(e)}
                       />
                       <span className="absolute bottom-2 left-2 bg-neutral-950/90 text-amber-500 text-[8.5px] font-mono font-bold px-2 py-0.5 uppercase tracking-wider">
                         Sany Global Alliance
@@ -227,10 +235,11 @@ export default function App() {
                   }`}>
                     <div className="h-44 w-full overflow-hidden relative border-b border-neutral-200 dark:border-neutral-800">
                       <img 
-                        src="/src/assets/images/concrete_pump_pipes_1780284052994.png" 
+                        src="/assets/images/concrete_pump_pipes_1780284052994.png" 
                         alt="Twin-Wall Pipelines" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
+                        onError={(e) => handleImageError(e)}
                       />
                       <span className="absolute bottom-2 left-2 bg-neutral-950/90 text-amber-500 text-[8.5px] font-mono font-bold px-2 py-0.5 uppercase tracking-wider">
                         Istanbul Sourced (DN125)
@@ -263,10 +272,11 @@ export default function App() {
                   }`}>
                     <div className="h-44 w-full overflow-hidden relative border-b border-neutral-200 dark:border-neutral-800">
                       <img 
-                        src="/src/assets/images/sany_crane_stc500_1793851361061.jpg" 
+                        src="/assets/images/sany_crane_stc500_1793851361061.jpg" 
                         alt="Hauling & Permitting Logistics" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
+                        onError={(e) => handleImageError(e)}
                       />
                       <span className="absolute bottom-2 left-2 bg-neutral-950/90 text-amber-500 text-[8.5px] font-mono font-bold px-2 py-0.5 uppercase tracking-wider">
                         LASTMA Express Transit
@@ -307,10 +317,11 @@ export default function App() {
                     <div className="lg:col-span-5 relative group">
                       <div className="relative h-64 sm:h-72 w-full overflow-hidden border border-amber-500/30">
                         <img 
-                          src="/src/assets/images/investor_portal_hero_1793855237606.jpg" 
+                          src="/assets/images/investor_portal_hero_1793855237606.jpg" 
                           alt="Partners Investment & Fleet Co-Ownership"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e)}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         
@@ -450,6 +461,7 @@ export default function App() {
                           alt="Engineer Emmanuel - Machinery Maintenance & Hydraulic Repair"
                           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
                         <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
@@ -470,6 +482,7 @@ export default function App() {
                           alt="Engineer Emmanuel - Line Pump Field Setup & DN125 Pipeline Specialist"
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
                         <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
@@ -490,6 +503,7 @@ export default function App() {
                           alt="Engineer Emmanuel - Project Supervisor & Pour Coordinator"
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
                         <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
@@ -510,6 +524,7 @@ export default function App() {
                           alt="Engineer Emmanuel - Certified Heavy Sany Machine Operator"
                           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
+                          onError={(e) => handleImageError(e, DEFAULT_LABOR_FALLBACK)}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
                         <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
@@ -616,6 +631,7 @@ export default function App() {
                 onAddToQuote={handleAddToQuote} 
                 addedItems={addedItems} 
                 isLightMode={isLightMode}
+                initialCategory={partsCategory}
               />
             </motion.div>
           )}
@@ -736,7 +752,7 @@ export default function App() {
       </main>
 
       {/* Branded Footer */}
-      <Footer onNavChange={setActiveTab} isLightMode={isLightMode} />
+      <Footer onNavChange={handleNavChange} isLightMode={isLightMode} />
 
       {/* Clasqo Live Support AI Assistant & Direct WhatsApp Hub */}
       <ClasqoLiveSupport onNavigateTab={handleNavChange} isLightMode={isLightMode} />
