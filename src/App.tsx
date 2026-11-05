@@ -20,7 +20,7 @@ import { ProjectGallery } from './components/ProjectGallery';
 import { PartnersInvestmentPortal } from './components/PartnersInvestmentPortal';
 import { InvestorAdminPortal } from './components/InvestorAdminPortal';
 import Footer from './components/Footer';
-import WhatsAppContact from './components/WhatsAppContact';
+import ClasqoLiveSupport from './components/ClasqoLiveSupport';
 import { QuoteItem } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShieldCheck, Truck, Cpu, Compass, HardHat, PhoneCall, MapPin, Users, Image as ImageIcon, TrendingUp, ArrowRight, Briefcase, DollarSign } from 'lucide-react';
@@ -375,15 +375,21 @@ export default function App() {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-3 pt-3">
-                        <button
+                        <motion.button
+                          whileHover={{ scale: 1.04, y: -2 }}
+                          whileTap={{ scale: 0.96 }}
+                          transition={{ type: 'spring', stiffness: 350, damping: 20 }}
                           onClick={() => setActiveTab('invest')}
-                          className="bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-6 py-3 font-black text-xs uppercase tracking-widest inline-flex items-center gap-2 transition-all cursor-pointer shadow-lg active:scale-95 whitespace-nowrap"
+                          className="bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-6 py-3 font-black text-xs uppercase tracking-widest inline-flex items-center gap-2 transition-all cursor-pointer shadow-lg whitespace-nowrap"
                         >
-                          <TrendingUp className="w-4 h-4" />
+                          <TrendingUp className="w-4 h-4 animate-bounce" />
                           <span>Launch USD ROI Calculator & Packages</span>
                           <ArrowRight className="w-4 h-4" />
-                        </button>
-                        <button
+                        </motion.button>
+                        <motion.button
+                          whileHover={{ scale: 1.03, y: -2 }}
+                          whileTap={{ scale: 0.96 }}
+                          transition={{ type: 'spring', stiffness: 350, damping: 20 }}
                           onClick={() => setActiveTab('investor-admin')}
                           className={`border px-5 py-3 font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
                             isLightMode 
@@ -393,7 +399,7 @@ export default function App() {
                         >
                           <Briefcase className="w-4 h-4 text-amber-500" />
                           <span>Fleet Operations Console</span>
-                        </button>
+                        </motion.button>
                       </div>
                     </div>
                   </div>
@@ -613,8 +619,8 @@ export default function App() {
       {/* Branded Footer */}
       <Footer onNavChange={setActiveTab} isLightMode={isLightMode} />
 
-      {/* WhatsApp Chat Floating Channel */}
-      <WhatsAppContact />
+      {/* Clasqo Live Support AI Assistant & Direct WhatsApp Hub */}
+      <ClasqoLiveSupport onNavigateTab={handleNavChange} isLightMode={isLightMode} />
     </div>
   );
 }
