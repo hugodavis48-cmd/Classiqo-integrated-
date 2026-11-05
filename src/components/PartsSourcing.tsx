@@ -308,6 +308,74 @@ export default function PartsSourcing({ onAddToQuote, addedItems, isLightMode = 
           </div>
         </div>
 
+        {/* FIELD PIPELINE SETUP & CLAMPING FEATURE: ENGINEER EMMANUEL */}
+        <div className={`border p-6 sm:p-8 mb-16 relative overflow-hidden transition-colors ${
+          isLightMode ? 'bg-white border-neutral-300 shadow-md' : 'bg-[#0B1535]/80 border-[#182747]'
+        }`}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-5 relative group">
+              <div className="relative h-60 sm:h-68 w-full overflow-hidden border border-amber-500/40 shadow-xl bg-black">
+                <img 
+                  src="/assets/aistudio/0a5287a2-c619-408b-ace7-27e0183869ac_074b7d7f.jpeg"
+                  alt="Engineer Emmanuel - Field Line Pump Setup & Clamping"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+                <span className="absolute top-3 left-3 bg-amber-500 text-neutral-950 text-[9px] font-mono font-black uppercase px-2.5 py-1 tracking-wider shadow">
+                  ★ Certified Line Pump Field Setup
+                </span>
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <div className="text-[10px] text-amber-400 font-mono font-bold uppercase">
+                    Lead Setup Engineer
+                  </div>
+                  <div className="text-sm font-black uppercase mt-0.5">
+                    Engineer Emmanuel Clamping DN125 Pipeline
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 space-y-3 font-mono">
+              <div className="flex items-center gap-2">
+                <span className="bg-amber-500/10 text-amber-500 border border-amber-500/30 text-[9px] px-2 py-0.5 font-bold uppercase">
+                  250-BAR STRUCTURAL INTEGRITY
+                </span>
+                <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 text-[9px] px-2 py-0.5 font-bold uppercase">
+                  ● ZERO BLOWOUT GUARANTEE
+                </span>
+              </div>
+
+              <h3 className={`text-xl sm:text-2xl font-black uppercase tracking-tight font-sans ${
+                isLightMode ? 'text-[#0C122C]' : 'text-white'
+              }`}>
+                Precision High-Pressure Pipeline Assembly On Rebar Decks
+              </h3>
+
+              <p className={`text-xs leading-relaxed font-sans ${
+                isLightMode ? 'text-neutral-700' : 'text-neutral-300'
+              }`}>
+                Pumping high-viscosity aggregate across 300+ meters requires flawless joint sealing. Clasqo’s <strong>Engineer Emmanuel</strong> personally audits every Istanbul-sourced DN125 twin-wall pipe, aligns heavy toggle snap clamps, and verifies double-lip nitrile rubber gaskets under 125-bar vertical pressure before pumping begins.
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2 text-[10px]">
+                <div className={`p-2.5 border ${isLightMode ? 'bg-neutral-50 border-neutral-200' : 'bg-[#060a1a] border-[#182747]'}`}>
+                  <span className="text-neutral-500 block text-[8px] uppercase">Burst Threshold</span>
+                  <span className="text-amber-500 font-bold">250 Bar Tested</span>
+                </div>
+                <div className={`p-2.5 border ${isLightMode ? 'bg-neutral-50 border-neutral-200' : 'bg-[#060a1a] border-[#182747]'}`}>
+                  <span className="text-neutral-500 block text-[8px] uppercase">Clamping SLA</span>
+                  <span className="text-emerald-400 font-bold">100% Hermetic Seal</span>
+                </div>
+                <div className={`p-2.5 border ${isLightMode ? 'bg-neutral-50 border-neutral-200' : 'bg-[#060a1a] border-[#182747]'}`}>
+                  <span className="text-neutral-500 block text-[8px] uppercase">Field Lead</span>
+                  <span className="text-white font-bold">Engr. Emmanuel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* SECTION 2: INDIVIDUAL Spare Parts Catalog */}
         <div className={`border-t pt-12 ${isLightMode ? 'border-neutral-200' : 'border-[#182747]'}`}>
           <div className="flex flex-col md:flex-row sm:items-center justify-between gap-6 mb-8">

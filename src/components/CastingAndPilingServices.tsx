@@ -283,6 +283,39 @@ export default function CastingAndPilingServices({ onAddToQuote, addedItems, isL
                 </li>
               </ul>
             </div>
+
+            {/* Field Engineering Lead Spotlight: Engineer Emmanuel */}
+            <div className={`border p-5 space-y-3 font-mono text-[10px] rounded-none ${
+              isLightMode ? 'bg-amber-500/5 border-amber-500/30 text-neutral-800' : 'bg-[#060a1a] border-amber-500/40 text-neutral-200'
+            }`}>
+              <div className="flex items-center gap-2 text-amber-500 font-extrabold text-[11px] border-b pb-2 border-amber-500/20">
+                <HardHat className="w-4 h-4 text-amber-500" />
+                <span>FIELD LEADERSHIP: ENGR. EMMANUEL</span>
+              </div>
+              <div className="relative h-40 w-full overflow-hidden border border-neutral-700/50">
+                <img 
+                  src="/assets/aistudio/eb5b8f2c-b798-446c-ada3-c5c16e884e98_7a261d0a.jpeg"
+                  alt="Engineer Emmanuel - On-Deck Pour Coordination"
+                  className="w-full h-full object-cover object-top"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-2.5">
+                  <span className="bg-amber-500 text-neutral-950 font-black text-[8px] px-1.5 py-0.2 uppercase w-max">
+                    Project Supervisor & Lead Coordinator
+                  </span>
+                  <span className="text-white text-[10px] font-bold mt-0.5">
+                    Continuous Monolithic Raft & High-Rise Pouring
+                  </span>
+                </div>
+              </div>
+              <p className="text-[10px] leading-relaxed">
+                Every major casting is directly coordinated or overseen by <strong>Engineer Emmanuel</strong>, ensuring proper outrigger stabilization, 250-bar pipeline joint lockup, and continuous ready-mix delivery flow with zero cold joints.
+              </p>
+              <div className="flex justify-between items-center pt-1 border-t border-amber-500/20 text-[9px]">
+                <span className="text-emerald-400 font-bold">✓ 142 Pours Without Blockage</span>
+                <span className="text-amber-400 font-bold">16+ Yrs Lagos Exp</span>
+              </div>
+            </div>
           </div>
 
           {/* Service Configuration & Estimator (Col Span 7) */}

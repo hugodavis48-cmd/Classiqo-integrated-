@@ -148,7 +148,8 @@ async function startServer() {
             2. High-Pressure Concrete Pipeline & Parts: Istanbul Turkish-sourced DN125 twin-wall pipes (3m/2m), high-chromium 90° wear elbows, quick-snap coupling clamps, slide valves, wear plates, rubber gaskets.
             3. Geotechnical & Piling Services: Bored piling, bentonite slurry mud casing, underwater tremie concrete pours for Lekki, Eko Atlantic, Banana Island coastal wetlands.
             4. Partners Investment & USD Profit Share Program: Minimum $3,000 USD entry, 18.5% to 32.4% Annualized APY in USD, 70/30 Net Lease Profit model (70% net lease income directly to investors, 30% retained for operations/operators/insurance/LASTMA permits), monthly direct wire to USD domiciliary accounts, CAC registered co-ownership deeds, real-time GPS telematics login, 100% maintenance guarantee by Clasqo.
-            5. Direct Contacts: Phone +234 802 087 9468, WhatsApp Desk +234 806 334 2947, Email info@clasqo.com.ng.
+            5. Technical Field Leadership & Machinery Mastery: Lead Engineer Emmanuel — Clasqo's most decorated multi-skilled engineer, highly experienced and proactive in heavy machinery maintenance & hydraulic chassis repair, high-pressure line pump field pipeline setup (Turkish DN125 clamp locking & burst testing), project coordination & monolithic slab pour supervision, and heavy machine operation (Sany 56m boom pumps, excavators, cranes). 16+ years Lagos field experience, 142 completed projects, 5.0 rating.
+            6. Direct Contacts: Phone +234 802 087 9468, WhatsApp Desk +234 806 334 2947, Email info@clasqo.com.ng.
             
             Keep answers concise (2-4 clear paragraphs or bullet points). Always be courteous, precise, and practical for construction contractors and serious diaspora/local investors.`,
           }
@@ -253,6 +254,26 @@ function generateMockConsultation(
 function generateActionMetadata(userMsg: string, reply: string) {
   const query = (userMsg + ' ' + reply).toLowerCase();
   
+  if (query.includes('emmanuel') || query.includes('workforce') || query.includes('labor') || query.includes('operator') || query.includes('mechanic') || query.includes('maintenance') || query.includes('supervisor') || query.includes('technician') || query.includes('crew') || query.includes('engineer')) {
+    return {
+      quickActions: [
+        { label: '👷 Deploy Engr. Emmanuel Crew', action: 'navigate', tab: 'workforce' },
+        { label: '💬 WhatsApp Technical Lead', action: 'whatsapp', text: 'Hello Clasqo, I would like to request Engineer Emmanuel and his technical crew for on-site machinery operations and supervision.' },
+        { label: '📝 Build Full Project Quote', action: 'navigate', tab: 'quote' }
+      ],
+      card: {
+        type: 'labor',
+        title: 'Engr. Emmanuel — Lead Multi-Skilled Engineer',
+        subtitle: 'Machinery Maintenance, Line Pump Field Setup, Pour Coordination & Heavy Equipment Operator',
+        metric: '16+ Yrs Exp • 142 Projects',
+        tag: 'Most Decorated Field Lead',
+        tab: 'workforce',
+        linkText: 'View Engr. Emmanuel Masterclass & Deploy Crew →',
+        image: '/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg'
+      }
+    };
+  }
+
   if (query.includes('invest') || query.includes('roi') || query.includes('usd') || query.includes('profit') || query.includes('yield') || query.includes('co-own')) {
     return {
       quickActions: [
@@ -355,7 +376,21 @@ function generateLiveSupportFallback(userMsg: string) {
   const query = userMsg.toLowerCase();
   let reply = '';
 
-  if (query.includes('invest') || query.includes('roi') || query.includes('usd') || query.includes('profit') || query.includes('tier') || query.includes('co-own')) {
+  if (query.includes('emmanuel') || query.includes('workforce') || query.includes('operator') || query.includes('mechanic') || query.includes('maintenance') || query.includes('supervisor') || query.includes('technician') || query.includes('labor') || query.includes('crew') || (query.includes('engineer') && !query.includes('consult'))) {
+    reply = `Meet Engineer Emmanuel — Clasqo Integrated's most decorated, highly experienced, proactive, multi-skilled field leader.
+
+Key Technical Disciplines & Hands-On Mastery:
+• Machinery Maintenance & Hydraulic Repair: Rapid chassis diagnostics, high-pressure hydraulic line fittings, and emergency 48-hour turnarounds to eliminate costly job downtime.
+• Line Pump Field Setup: Precision Turkish DN125 twin-wall pipeline assembly, forged snap-coupling clamp locking, and high-pressure burst safety tests (250-bar certified).
+• Project Supervision & Pour Coordination: Active concrete deck supervision, slump monitoring, radio telemetry dispatch, and monolithic pour sequencing across Lagos high-rises.
+• Heavy Machine Operator: Sany SY215C/SY365H excavator precision trenching, 56m boom pump articulated positioning, and STC500 mobile crane lifting.
+
+Track Record:
+• 16+ years of Lagos coastal construction experience (Eko Atlantic, Victoria Island, Lekki marina viaducts).
+• 142+ major completed projects with a 100% zero-injury record and 5.0 client rating.
+
+You can inspect his interactive credentials on the Workforce Management tab or deploy Engr. Emmanuel directly for your project on WhatsApp.`;
+  } else if (query.includes('invest') || query.includes('roi') || query.includes('usd') || query.includes('profit') || query.includes('tier') || query.includes('co-own')) {
     reply = `Welcome to Clasqo Integrated! Our Partners Investment & USD Profit Share Program allows local and diaspora partners to co-own revenue-generating heavy construction machinery staged at our Lekki Depot.
 
 Key Highlights of the Program:

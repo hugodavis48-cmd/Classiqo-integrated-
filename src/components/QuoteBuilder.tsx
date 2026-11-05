@@ -66,6 +66,16 @@ const QUICK_BUNDLES = [
       { type: 'machinery' as const, id: 'sany-excavator-sy215c', name: 'Sany SY215C Medium Excavator (21t)', quantity: 1, days: 5, rateOrPrice: 380000 },
       { type: 'machinery' as const, id: 'sany-roller-ssr120', name: 'Sany 12t Vibratory Road Roller', quantity: 1, days: 5, rateOrPrice: 280000 }
     ]
+  },
+  {
+    id: 'bundle-lead-engineer',
+    name: 'Field Crew Lead: Engr. Emmanuel',
+    description: 'Lead Multi-Skilled Engineer + Sany 56m Boom Pump + Pipeline Clamping Crew',
+    items: [
+      { type: 'labor' as const, id: 'wf-engr-emmanuel-lead', name: 'Lead Multi-Skilled Engineer: Engr. Emmanuel (Setup & Maintenance)', quantity: 1, days: 5, rateOrPrice: 150000 },
+      { type: 'machinery' as const, id: 'sany-pump-56m', name: 'Sany 56m Truck-Mounted Concrete Boom Pump', quantity: 1, days: 5, rateOrPrice: 1450000 },
+      { type: 'part' as const, id: 'coupling-dn125-clamp', name: 'Quick-Release Concrete Snap Clamp (DN125)', quantity: 15, rateOrPrice: 42000 }
+    ]
   }
 ];
 
@@ -385,7 +395,7 @@ export default function QuoteBuilder({
                     <span className="text-[9px] font-mono font-bold text-amber-500 uppercase tracking-widest block">
                       TURNKEY LAGOS JOB PACKAGES (1-CLICK LOAD)
                     </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                       {QUICK_BUNDLES.map(bundle => (
                         <div
                           key={bundle.id}

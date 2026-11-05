@@ -405,6 +405,125 @@ export default function App() {
                   </div>
                 </div>
 
+                {/* FIELD LEADERSHIP & TECHNICAL MASTERY: ENGINEER EMMANUEL */}
+                <div className={`mt-16 border rounded-none p-6 sm:p-10 relative overflow-hidden transition-all ${
+                  isLightMode 
+                    ? 'bg-white border-neutral-300 shadow-md' 
+                    : 'bg-[#060a1a] border-[#182747]'
+                }`}>
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b pb-6 border-neutral-800/30">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] text-amber-500 font-black uppercase tracking-[0.25em] font-mono flex items-center gap-1.5">
+                          <HardHat className="w-3.5 h-3.5 text-amber-500 animate-pulse" /> CLASQO FIELD LEADERSHIP
+                        </span>
+                        <span className="bg-amber-500/10 text-amber-500 border border-amber-500/30 text-[9px] font-mono font-bold px-2 py-0.5 uppercase">
+                          ★ MOST DECORATED MULTI-SKILLED ENGINEER
+                        </span>
+                      </div>
+                      <h3 className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${isLightMode ? 'text-[#0C122C]' : 'text-white'}`}>
+                        Engineer Emmanuel — Master of Field Operations
+                      </h3>
+                      <p className={`text-xs sm:text-sm max-w-2xl leading-relaxed ${isLightMode ? 'text-neutral-600' : 'text-neutral-300'}`}>
+                        Proactive, battle-tested engineering leadership across Lagos. From under-chassis hydraulic diagnostics and 250-bar line pump clamping to continuous high-rise pour supervision and heavy Sany equipment operations.
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-3 shrink-0">
+                      <button
+                        onClick={() => handleNavChange('workforce')}
+                        className="bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-5 py-2.5 font-black text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow"
+                      >
+                        <Users className="w-4 h-4" />
+                        <span>Deploy Engineer Emmanuel & Crew</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 4 Multi-Discipline Action Photos Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+                    {/* Role 1: Maintenance */}
+                    <div className="group relative border border-neutral-800 overflow-hidden bg-black">
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img 
+                          src="/assets/aistudio/64457cae-5db4-421a-ba68-8aca45b5f3c6_3dd805e9.jpeg"
+                          alt="Engineer Emmanuel - Machinery Maintenance & Hydraulic Repair"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
+                        <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
+                          Hydraulic Overhauls
+                        </span>
+                        <div className="absolute bottom-3 left-3 right-3 text-white">
+                          <h4 className="text-xs font-black uppercase leading-tight">Machinery Maintenance & Repair</h4>
+                          <p className="text-[10px] text-neutral-300 font-mono mt-0.5">Under-chassis hydraulic lines & Rexroth pumps</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Role 2: Line Pump Setup */}
+                    <div className="group relative border border-neutral-800 overflow-hidden bg-black">
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img 
+                          src="/assets/aistudio/0a5287a2-c619-408b-ace7-27e0183869ac_074b7d7f.jpeg"
+                          alt="Engineer Emmanuel - Line Pump Field Setup & DN125 Pipeline Specialist"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
+                        <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
+                          250-Bar DN125 Setup
+                        </span>
+                        <div className="absolute bottom-3 left-3 right-3 text-white">
+                          <h4 className="text-xs font-black uppercase leading-tight">Line Pump Setup & Clamping</h4>
+                          <p className="text-[10px] text-neutral-300 font-mono mt-0.5">Forged snap clamps & twin-wall pipe layouts</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Role 3: Pour Supervision */}
+                    <div className="group relative border border-neutral-800 overflow-hidden bg-black">
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img 
+                          src="/assets/aistudio/eb5b8f2c-b798-446c-ada3-c5c16e884e98_7a261d0a.jpeg"
+                          alt="Engineer Emmanuel - Project Supervisor & Pour Coordinator"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
+                        <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
+                          Pour Supervision
+                        </span>
+                        <div className="absolute bottom-3 left-3 right-3 text-white">
+                          <h4 className="text-xs font-black uppercase leading-tight">Project Coordination & QC</h4>
+                          <p className="text-[10px] text-neutral-300 font-mono mt-0.5">On-deck boom directing & slump flow control</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Role 4: Heavy Machine Operator */}
+                    <div className="group relative border border-neutral-800 overflow-hidden bg-black">
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img 
+                          src="/assets/aistudio/Gemini_Generated_Image_36480v36480v3648_0d1e6c9d.jpeg"
+                          alt="Engineer Emmanuel - Certified Heavy Sany Machine Operator"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
+                        <span className="absolute top-2 left-2 bg-amber-500 text-neutral-950 text-[8.5px] font-mono font-black px-2 py-0.5 uppercase">
+                          Sany Masterclass Pilot
+                        </span>
+                        <div className="absolute bottom-3 left-3 right-3 text-white">
+                          <h4 className="text-xs font-black uppercase leading-tight">Certified Heavy Operator</h4>
+                          <p className="text-[10px] text-neutral-300 font-mono mt-0.5">Sany SY215C & SY365H heavy excavator pilot</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Client Trust rotating testimonials section */}
                 <div className="mt-16">
                   <ClientTrust isLightMode={isLightMode} />

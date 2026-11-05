@@ -155,6 +155,8 @@ export default function ClasqoLiveSupport({ onNavigateTab, isLightMode = false }
           cardImage = '/src/assets/images/service_bored_piling_1793852380230.jpg';
         } else if (data.card.type === 'parts') {
           cardImage = '/src/assets/images/part_twinwall_elbow_90_1793852423091.jpg';
+        } else if (data.card.type === 'labor') {
+          cardImage = '/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg';
         }
       }
 
@@ -498,6 +500,12 @@ export default function ClasqoLiveSupport({ onNavigateTab, isLightMode = false }
                     className="text-[9px] font-mono px-2 py-0.5 bg-neutral-900/60 hover:bg-amber-500 hover:text-neutral-950 text-neutral-300 border border-[#182747] cursor-pointer"
                   >
                     🏗️ Bored Piling Rigs
+                  </button>
+                  <button
+                    onClick={() => handleSendMessage('Tell me about Lead Engineer Emmanuel and his multi-skilled certifications in maintenance, line pump setup, and heavy machinery operation')}
+                    className="text-[9px] font-mono px-2 py-0.5 bg-neutral-900/60 hover:bg-amber-500 hover:text-neutral-950 text-neutral-300 border border-[#182747] cursor-pointer"
+                  >
+                    👷 Engr. Emmanuel Mastery
                   </button>
                   <button
                     onClick={() => triggerDirectWhatsApp('Direct inquiry regarding machinery lease and quotation')}

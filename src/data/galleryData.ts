@@ -155,5 +155,55 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     description: 'High-speed civil embankment stabilization executed overnight to safeguard the primary arterial ramp connecting mainland Lagos to the maritime ports.',
     tag: 'Civil Retaining & Earthworks',
     keyHighlight: 'Completed without interrupting daytime commercial container freight.'
+  },
+  {
+    id: 'proj-emmanuel-line-pump-setup',
+    title: 'High-Pressure Line Pump Field Setup & DN125 Pipeline Clamping',
+    category: 'concrete',
+    location: 'Banana Island & Lekki Phase 1 Waterfront, Lagos',
+    completionYear: '2024 - 2025',
+    client: 'Levitikal Construction & SPG Nigeria',
+    scope: 'Continuous 380m pipeline layout assembled by Lead Field Engineer Emmanuel using hardened Turkish DN125 twin-wall pipes, heavy forged quick-snap couplings, and dual-lip rubber seals across active high-rise slab reinforcement.',
+    equipmentDeployed: [
+      'Turkish DN125 Hardened Induction Twin-Wall Pipes',
+      'Forged High-Pressure Quick-Snap Coupling Clamps',
+      'Atabey HBT80 Stationary Trailer Pump System',
+      'Lead Field Setup Engineer Emmanuel & Rigging Crew'
+    ],
+    metrics: [
+      { label: 'Pipeline Distance', value: '380 Meters' },
+      { label: 'Burst Pressure Tested', value: '250 Bar' },
+      { label: 'Gasket Seal Integrity', value: '100% Zero-Leak' },
+      { label: 'Assembly Turnaround', value: '< 3.5 Hours' }
+    ],
+    image: '/assets/aistudio/0a5287a2-c619-408b-ace7-27e0183869ac_074b7d7f.jpeg',
+    description: 'Precision pipeline configuration across intricate rebar decks. Engineer Emmanuel personally aligned, gasketed, and clamped each joint to prevent aggregate blowout under 125-bar vertical pumping thrust.',
+    tag: 'High-Pressure Pipeline Clamping',
+    keyHighlight: 'Assembled by Engr. Emmanuel with zero gasket leakage across 2,400m³ continuous monolithic pour.'
+  },
+  {
+    id: 'proj-emmanuel-chassis-maintenance',
+    title: '250-Hour Mobile Fleet Hydraulic Diagnostics & Chassis Maintenance',
+    category: 'infrastructure',
+    location: 'Clasqo Central Staging Yard, 1 Dr Babatunde Ayeni St, Lekki',
+    completionYear: '2025 Ongoing',
+    client: 'Clasqo Internal Fleet Operations & Partner Co-Owners',
+    scope: 'Mandatory 250-hour preventive servicing, high-pressure hydraulic line replacement, Rexroth valve calibrations, and chassis grease manifold audits executed by Engineer Emmanuel.',
+    equipmentDeployed: [
+      'Sany SY5313THB 56m Concrete Boom Chassis',
+      'Rexroth Hydraulic High-Pressure Line Gauges',
+      'Ultrasonic Pipe Wall Thickness Transducer',
+      'Factory-Trained Sany Maintenance Engineers'
+    ],
+    metrics: [
+      { label: 'Pressure Test Load', value: '320 Bar' },
+      { label: 'Hydraulic ISO Cleanliness', value: '16/14/11' },
+      { label: 'Overhaul Turnaround', value: '2.5 Hours' },
+      { label: 'Fleet Operating Uptime', value: '99.4%' }
+    ],
+    image: '/assets/aistudio/64457cae-5db4-421a-ba68-8aca45b5f3c6_3dd805e9.jpeg',
+    description: 'Proactive under-chassis engineering maintenance ensuring that chartered Sany machinery operates without mechanical or hydraulic failures on high-exposure Lagos construction jobs.',
+    tag: 'Preventive Fleet Maintenance',
+    keyHighlight: 'Under-chassis hydraulic diagnostics executed by Engr. Emmanuel guaranteeing 99.4% uptime.'
   }
 ];

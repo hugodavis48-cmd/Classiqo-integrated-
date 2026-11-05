@@ -4,8 +4,10 @@
  */
 
 import React, { useState } from 'react';
-import { WORKFORCE_DATA } from '../data/workforceData';
+import { WORKFORCE_DATA, ENGINEER_EMMANUEL_PROFILE } from '../data/workforceData';
 import { WorkforcePersonnel } from '../types';
+import { Award, Wrench, ShieldCheck, CheckCircle2, Star, Sparkles, Truck, PhoneCall, ChevronRight, Layers, HardHat } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface WorkforceManagementProps {
   onAddToQuote: (item: {
@@ -27,6 +29,7 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPersonnel, setSelectedPersonnel] = useState<WorkforcePersonnel | null>(null);
   const [activeVideoModal, setActiveVideoModal] = useState<WorkforcePersonnel | null>(null);
+  const [activeEmmanuelRole, setActiveEmmanuelRole] = useState<string>('lead-coordinator');
   const [bookingDays, setBookingDays] = useState<{ [id: string]: number }>({});
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null);
 
@@ -116,6 +119,231 @@ export const WorkforceManagement: React.FC<WorkforceManagementProps> = ({
             <span className="text-xs opacity-80">Check Quote tab to review total budget</span>
           </div>
         )}
+
+        {/* CLASQO MASTERCLASS SPOTLIGHT: ENGINEER EMMANUEL */}
+        <section className={`p-6 sm:p-8 lg:p-10 border rounded-2xl relative overflow-hidden transition-all ${
+          isLightMode 
+            ? 'bg-gradient-to-br from-amber-500/10 via-white to-white border-amber-500/30 shadow-xl' 
+            : 'bg-gradient-to-br from-amber-500/15 via-[#0B1535] to-[#060a1a] border-amber-500/40 shadow-2xl'
+        }`}>
+          <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-12 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          {/* Header */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b pb-6 border-neutral-700/20">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2">
+                <span className="bg-amber-500 text-neutral-950 font-black text-[9.5px] uppercase tracking-widest px-2.5 py-0.5 rounded shadow">
+                  ★ CLASQO MASTERCLASS SPOTLIGHT
+                </span>
+                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[9px] font-mono px-2 py-0.5 font-bold uppercase animate-pulse">
+                  ● LEAD FIELD DEPLOYMENT
+                </span>
+              </div>
+              <h2 className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${isLightMode ? 'text-[#0C122C]' : 'text-white'}`}>
+                Engineer Emmanuel — Most Decorated Multi-Skilled Field Engineer
+              </h2>
+              <p className={`text-xs sm:text-sm max-w-3xl leading-relaxed ${isLightMode ? 'text-neutral-600' : 'text-neutral-300'}`}>
+                Highly experienced and exceptionally proactive technical lead commanding hands-on machinery maintenance, high-pressure line pump field setups, continuous high-rise pour supervision, and certified heavy equipment operations.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0 font-mono">
+              <div className={`p-3 border text-center ${isLightMode ? 'bg-white border-neutral-200' : 'bg-neutral-950/80 border-[#182747]'}`}>
+                <div className="text-xl font-black text-amber-500">16+ Yrs</div>
+                <div className="text-[8px] text-neutral-500 uppercase tracking-widest">Field Leadership</div>
+              </div>
+              <div className={`p-3 border text-center ${isLightMode ? 'bg-white border-neutral-200' : 'bg-neutral-950/80 border-[#182747]'}`}>
+                <div className="text-xl font-black text-emerald-400">142 Pours</div>
+                <div className="text-[8px] text-neutral-500 uppercase tracking-widest">Zero Blockages</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Multi-Role Selector Tabs */}
+          <div className="pt-6">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold">
+                SELECT OPERATIONAL SPECIALTY ROLE:
+              </span>
+              <span className="text-[9px] font-mono text-amber-500">
+                5 Active Master Disciplines
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 font-mono">
+              {ENGINEER_EMMANUEL_PROFILE.roles.map((role) => {
+                const isSelected = activeEmmanuelRole === role.id;
+                return (
+                  <button
+                    key={role.id}
+                    onClick={() => setActiveEmmanuelRole(role.id)}
+                    className={`p-2.5 text-left border transition-all cursor-pointer flex flex-col justify-between rounded-lg ${
+                      isSelected
+                        ? isLightMode
+                          ? 'bg-amber-500 border-amber-500 text-neutral-950 shadow-md translate-y-[-2px]'
+                          : 'bg-amber-500 border-amber-500 text-neutral-950 shadow-lg translate-y-[-2px]'
+                        : isLightMode
+                          ? 'bg-white border-neutral-200 hover:border-neutral-300 text-neutral-700'
+                          : 'bg-[#060a1a] border-[#182747] hover:border-[#1e3260] text-neutral-300'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between text-[8px] font-bold uppercase opacity-80 mb-1">
+                      <span>{role.badge}</span>
+                      {isSelected && <span>✓ ACTIVE</span>}
+                    </div>
+                    <div className="text-[11px] font-black line-clamp-2 leading-tight">
+                      {role.title}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Active Role Showcase Card */}
+          {(() => {
+            const currentRole = ENGINEER_EMMANUEL_PROFILE.roles.find(r => r.id === activeEmmanuelRole) || ENGINEER_EMMANUEL_PROFILE.roles[0];
+            return (
+              <div className="mt-6 pt-6 border-t border-neutral-700/20">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  
+                  {/* Photo with Overlay (5 Cols) */}
+                  <div className="lg:col-span-5 relative group">
+                    <div className="relative h-72 sm:h-80 w-full overflow-hidden rounded-xl border border-amber-500/40 shadow-2xl bg-black">
+                      <img
+                        src={currentRole.image}
+                        alt={`Engineer Emmanuel - ${currentRole.title}`}
+                        className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+
+                      <div className="absolute top-3 left-3 bg-neutral-950/90 text-amber-500 text-[9px] font-mono font-bold px-2.5 py-1 uppercase tracking-wider border border-amber-500/30">
+                        {currentRole.badge}
+                      </div>
+
+                      <div className="absolute bottom-3 left-3 right-3 text-white">
+                        <div className="text-xs text-amber-400 font-mono font-bold uppercase tracking-wider">
+                          FIELD SPECIALIZATION
+                        </div>
+                        <div className="text-base font-black uppercase leading-tight mt-0.5">
+                          {currentRole.title}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Role Thumbnails Strip */}
+                    <div className="grid grid-cols-5 gap-2 mt-3">
+                      {ENGINEER_EMMANUEL_PROFILE.roles.map((r) => (
+                        <button
+                          key={r.id}
+                          onClick={() => setActiveEmmanuelRole(r.id)}
+                          className={`relative aspect-square overflow-hidden rounded-md border-2 transition-all cursor-pointer ${
+                            activeEmmanuelRole === r.id
+                              ? 'border-amber-500 scale-105 shadow-md'
+                              : 'border-transparent opacity-60 hover:opacity-100'
+                          }`}
+                          title={r.title}
+                        >
+                          <img 
+                            src={r.image} 
+                            alt={r.title} 
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Role Details & Actions (7 Cols) */}
+                  <div className="lg:col-span-7 space-y-4">
+                    <div className="flex flex-wrap items-center gap-2 font-mono text-[9.5px]">
+                      <span className="text-amber-500 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 font-bold">
+                        ★ {currentRole.badge}
+                      </span>
+                      <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 font-bold">
+                        DEPLOYMENT: {currentRole.fieldDeployment}
+                      </span>
+                    </div>
+
+                    <h3 className={`text-xl sm:text-2xl font-black uppercase tracking-tight ${isLightMode ? 'text-[#0C122C]' : 'text-white'}`}>
+                      {currentRole.title}
+                    </h3>
+
+                    <p className={`text-xs sm:text-sm leading-relaxed ${isLightMode ? 'text-neutral-700' : 'text-neutral-300'}`}>
+                      {currentRole.summary}
+                    </p>
+
+                    {/* Tools and Deployment Highlights */}
+                    <div className="space-y-2 pt-2">
+                      <div className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest font-bold">
+                        FIELD HARDWARE & DIAGNOSTIC GEAR:
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {currentRole.toolsAndEquip.map((tool, tIdx) => (
+                          <span
+                            key={tIdx}
+                            className={`text-xs font-mono px-3 py-1 border rounded ${
+                              isLightMode 
+                                ? 'bg-neutral-100 border-neutral-300 text-neutral-800' 
+                                : 'bg-[#060a1a] border-[#182747] text-amber-300'
+                            }`}
+                          >
+                            ✓ {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Verified Benchmark Highlight */}
+                    <div className={`p-3.5 border rounded-lg flex items-start gap-3 font-mono text-xs ${
+                      isLightMode 
+                        ? 'bg-amber-500/5 border-amber-500/30 text-neutral-800' 
+                        : 'bg-neutral-950/80 border-amber-500/30 text-amber-200'
+                    }`}>
+                      <ShieldCheck className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-bold uppercase tracking-wider block text-[9px] text-amber-500 mb-0.5">
+                          VERIFIED FIELD BENCHMARK:
+                        </span>
+                        <span>{currentRole.keyHighlight}</span>
+                      </div>
+                    </div>
+
+                    {/* Booking Actions */}
+                    <div className="pt-3 flex flex-wrap items-center gap-3">
+                      <button
+                        onClick={() => {
+                          const leadPerson = WORKFORCE_DATA.find(p => p.id === 'wf-engr-emmanuel-lead') || WORKFORCE_DATA[0];
+                          handleBooking(leadPerson);
+                        }}
+                        className="bg-amber-500 text-neutral-950 hover:bg-neutral-900 hover:text-white px-6 py-3 font-black text-xs uppercase tracking-widest inline-flex items-center gap-2 transition-all cursor-pointer shadow-lg active:scale-95 rounded-lg whitespace-nowrap"
+                      >
+                        <HardHat className="w-4 h-4" />
+                        <span>Deploy Engineer Emmanuel (₦95,000 / Day)</span>
+                      </button>
+
+                      <a
+                        href="https://wa.me/2348063342947?text=Hello%20Clasqo,%20I%20would%20like%20to%20request%20Engineer%20Emmanuel%20for%20our%20construction%20project%20supervision%20and%20line%20pump%20setup."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`border px-5 py-3 font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 transition-all cursor-pointer rounded-lg whitespace-nowrap ${
+                          isLightMode 
+                            ? 'border-neutral-300 text-neutral-800 hover:bg-neutral-100' 
+                            : 'border-[#1E2E5B] text-neutral-300 hover:bg-[#121c3b] hover:text-white'
+                        }`}
+                      >
+                        <PhoneCall className="w-4 h-4 text-emerald-400" />
+                        <span>Direct Field Dispatch WhatsApp</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+        </section>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 shadow-sm">

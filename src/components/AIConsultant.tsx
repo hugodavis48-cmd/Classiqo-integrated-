@@ -70,7 +70,7 @@ export default function AIConsultant({ onAddToQuote, addedItems, isLightMode = f
     }
   };
 
-  const isItemInCart = (id: string, type: 'machinery' | 'part') => {
+  const isItemInCart = (id: string, type: 'machinery' | 'part' | 'labor' | 'service') => {
     return addedItems.some(item => item.id === id && item.type === type);
   };
 
@@ -387,6 +387,50 @@ export default function AIConsultant({ onAddToQuote, addedItems, isLightMode = f
                         {response.logisticsAssessment}
                       </p>
                     </div>
+                  </div>
+
+                  {/* Assigned Lead Field Engineer Recommendation: Engineer Emmanuel */}
+                  <div className={`p-4 border rounded-none flex flex-col sm:flex-row items-center justify-between gap-4 ${
+                    isLightMode ? 'bg-amber-500/10 border-amber-500/40' : 'bg-[#0B1535] border-amber-500/40'
+                  }`}>
+                    <div className="flex items-center gap-3.5">
+                      <img 
+                        src="/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg" 
+                        alt="Engineer Emmanuel" 
+                        className="w-14 h-14 object-cover border border-amber-500/60 shadow-sm shrink-0"
+                      />
+                      <div>
+                        <span className="text-[8.5px] font-mono font-bold text-amber-500 uppercase tracking-widest block">
+                          RECOMMENDED ON-SITE FIELD LEADERSHIP
+                        </span>
+                        <h4 className={`text-xs font-black uppercase ${isLightMode ? 'text-[#0C122C]' : 'text-white'}`}>
+                          Engineer Emmanuel — Lead Multi-Skilled Engineer
+                        </h4>
+                        <p className={`text-[10px] font-mono mt-0.5 ${isLightMode ? 'text-neutral-600' : 'text-neutral-300'}`}>
+                          Machinery Maintenance, Line Pump Setup, Pour Supervision & Operator • 16+ Yrs Lagos Experience
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onAddToQuote({
+                          type: 'labor',
+                          id: 'wf-engr-emmanuel-lead',
+                          name: `Lead Field Engineer: Engr. Emmanuel (${projectForm.estimatedDurationDays || 30} Days Assigned)`,
+                          quantity: 1,
+                          days: projectForm.estimatedDurationDays || 30,
+                          rateOrPrice: 150000
+                        });
+                      }}
+                      className={`px-4 py-2.5 text-[9.5px] font-black uppercase tracking-wider shrink-0 transition-all cursor-pointer ${
+                        isItemInCart('wf-engr-emmanuel-lead', 'labor')
+                          ? 'bg-emerald-500 text-neutral-950 cursor-default'
+                          : 'bg-amber-500 hover:bg-amber-400 text-neutral-950 shadow'
+                      }`}
+                    >
+                      {isItemInCart('wf-engr-emmanuel-lead', 'labor') ? '✓ Lead Assigned' : '+ Assign Engr. Emmanuel'}
+                    </button>
                   </div>
                 </div>
 

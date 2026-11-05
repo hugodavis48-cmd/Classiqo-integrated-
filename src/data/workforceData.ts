@@ -7,6 +7,53 @@ import { WorkforcePersonnel } from '../types';
 
 export const WORKFORCE_DATA: WorkforcePersonnel[] = [
   {
+    id: 'wf-engr-emmanuel-lead',
+    name: 'Engr. Emmanuel (Chief Field Operations & Multi-Skilled Master)',
+    roleCategory: 'site_engineer',
+    roleTitle: 'Chief Field Operations Engineer & Multi-Disciplinary Master Specialist',
+    yearsExperience: 16,
+    certifications: [
+      'Clasqo Most Decorated Multi-Skilled Engineer',
+      'Certified Sany OEM Machinery Maintenance & Hydraulic Repair Specialist',
+      'Master Line Pump Field Setup & 250-Bar Pipeline Engineer',
+      'Senior Project Supervisor & Monolithic Pour Coordinator',
+      'Certified Sany Excavator & Heavy Plant Operator Class E'
+    ],
+    rating: 5.0,
+    completedProjects: 142,
+    reviewCount: 68,
+    availability: 'Available Now',
+    dailyRateNgn: 95000,
+    monthlyRateNgn: 1850000,
+    location: 'Central Lekki Depot & All Lagos Project Corridors',
+    bio: 'Clasqo\'s most decorated, highly proactive, multi-skilled field engineer. Unmatched hands-on mastery spanning heavy machinery maintenance/hydraulic repair under chassis, complex line pump setup and 250-bar DN125 twin-wall pipeline clamping, high-rise monolithic slab casting supervision, and certified heavy Sany excavator operation.',
+    skills: [
+      'Machinery Maintenance & Hydraulic Fault Overhaul',
+      'Line Pump Field Setup & DN125 Couplings Lockup',
+      'Project Supervision & Real-Time Pour Coordination',
+      'Certified Sany Heavy Excavator & Plant Operation',
+      'Emergency Pressure Bleed & Field Breakdown SLA (<35 Mins)',
+      'High-Slump Concrete Mix Flow Quality Assurance'
+    ],
+    image: '/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg',
+    equipmentSpecialization: [
+      'Sany 56m Boom Pumps & HBT80 Trailer Units',
+      'Sany SY215C & SY365H Heavy Excavators',
+      'Turkish DN125 Twin-Wall Induction Pipelines',
+      'Sany SR285 Rotary Piling Rig Systems',
+      'Zoomlion 50T Mobile Telescopic Cranes'
+    ],
+    featuredReview: {
+      client: 'Julius Berger & BCL Consortium',
+      project: 'Eko Atlantic Coastal Revetment & High-Rise Monolithic Pour',
+      rating: 5.0,
+      comment: 'Engineer Emmanuel is Clasqo\'s MVP. When a hydraulic line blew at 2 AM during a continuous 2,000m³ raft pour, Emmanuel diagnosed the pressure surge, replaced the hydraulic coupling under the truck chassis in 35 minutes, and personally took over line coordination. A proactive master of every construction discipline.',
+      date: 'March 2025'
+    },
+    hasVideoDemo: true,
+    videoDemoTitle: 'Engineer Emmanuel Field Supervision & Line Setup Masterclass'
+  },
+  {
     id: 'wf-site-eng-01',
     name: 'Engr. Babatunde Adeleke (FNSE, COREN)',
     roleCategory: 'site_engineer',
@@ -171,3 +218,79 @@ export const WORKFORCE_DATA: WorkforcePersonnel[] = [
     }
   }
 ];
+
+export interface EmmanuelRole {
+  id: string;
+  title: string;
+  badge: string;
+  image: string;
+  summary: string;
+  toolsAndEquip: string[];
+  keyHighlight: string;
+  fieldDeployment: string;
+}
+
+export const ENGINEER_EMMANUEL_PROFILE = {
+  name: 'Engineer Emmanuel',
+  title: "Clasqo's Most Decorated Multi-Skilled Master Engineer",
+  tagline: "Unmatched Expertise across Machinery Maintenance, Line Pump Field Setup, Site Supervision & Heavy Plant Operation",
+  experienceYears: 16,
+  rating: 5.0,
+  completedProjects: 142,
+  availability: 'Available for Priority Mobilization',
+  dailyRateNgn: 95000,
+  monthlyRateNgn: 1850000,
+  roles: [
+    {
+      id: 'lead-coordinator',
+      title: 'Chief Field Operations Engineer & Lead Technical Coordinator',
+      badge: 'Chief Technical Lead',
+      image: '/assets/aistudio/a988fb32-58ae-4b9b-a798-129545d20f7c_c8faa863.jpeg',
+      summary: 'Commanding high-exposure civil projects across Lagos. Oversees equipment dispatch logistics, site crew safety briefings, digital slump metrics, and overall contract quality assurance.',
+      toolsAndEquip: ['Two-Way Digital UHF Radio', 'Digital Field Tablet & Slump Sensors', 'COREN Site Logbook', 'Clasqo Project Badge'],
+      keyHighlight: 'Maintains an unblemished record of 142 monolithic pours completed without a single cold joint.',
+      fieldDeployment: 'Eko Atlantic, Lekki Scheme 1 & Victoria Island High-Rises'
+    },
+    {
+      id: 'project-supervisor',
+      title: 'Project Supervisor & Concrete Casting Operations Coordinator',
+      badge: 'Site Operations Lead',
+      image: '/assets/aistudio/eb5b8f2c-b798-446c-ada3-c5c16e884e98_7a261d0a.jpeg',
+      summary: 'Active on-deck supervision of high-volume concrete slab casting. Directs boom pump tip velocity, transit mixer flow sequences, vibratory compaction crews, and rebar clearance.',
+      toolsAndEquip: ['Walkie-Talkie Radio Hub', 'Pour Checklist & Slump Log Clipboard', 'High-Visibility Safety Vest', 'Heavy Industrial Work Boots'],
+      keyHighlight: 'Orchestrated continuous 18-hour raft casting of 2,200m³ at Banana Island with zero pump blockages.',
+      fieldDeployment: 'Marina Viaduct Interchange & Lekki Deep Sea Port Facilities'
+    },
+    {
+      id: 'maintenance-repair',
+      title: 'Machinery Maintenance & Hydraulic Repair Specialist',
+      badge: 'Master Mechanic',
+      image: '/assets/aistudio/64457cae-5db4-421a-ba68-8aca45b5f3c6_3dd805e9.jpeg',
+      summary: 'Proactive under-chassis hydraulic diagnostics and mechanical overhaul. Specializes in Rexroth hydraulic piston loops, high-pressure line bleeding, S-valve timing, and emergency field turnaround.',
+      toolsAndEquip: ['Double-Ended Spanner Wrenches', 'Ultrasonic Pipe Thickness Gauges', 'Hydraulic Pressure Calibration Gauges', 'High-Temp Nitrile O-Rings'],
+      keyHighlight: 'Achieved average emergency field repair turnaround of under 35 minutes across all chartered fleets.',
+      fieldDeployment: 'Lekki Staging Yard & Lagos Mobile Breakdown SLA Response'
+    },
+    {
+      id: 'line-pump-setup',
+      title: 'Line Pump Field Setup Engineer & High-Pressure Pipeline Specialist',
+      badge: 'Pipeline Specialist',
+      image: '/assets/aistudio/0a5287a2-c619-408b-ace7-27e0183869ac_074b7d7f.jpeg',
+      summary: 'Hands-on assembly and secure clamping of Turkish Istanbul DN125 twin-wall concrete pipelines. Inspects 250-bar burst thresholds, anchor tie-backs, 90° wear elbows, and double-lip rubber seals.',
+      toolsAndEquip: ['Forged Quick-Snap Coupling Clamps', 'Turkish DN125 Twin-Wall Induction Pipes', 'Full-Body Fall Arrest Harness', 'Reinforced Puncture Gloves'],
+      keyHighlight: 'Assembled and certified over 450 meters of horizontal line pump pipes without a single gasket blow-by.',
+      fieldDeployment: 'Banana Island High-Rises & Bonny Island LNG Terminals'
+    },
+    {
+      id: 'machine-operator',
+      title: 'Certified Heavy Machinery & Sany Excavator Master Operator',
+      badge: 'Master Machine Pilot',
+      image: '/assets/aistudio/Gemini_Generated_Image_36480v36480v3648_0d1e6c9d.jpeg',
+      summary: 'Sany Global Masterclass Certified operator. Commands Sany SY215C and SY365H heavy hydraulic excavators, Sany 56m boom pumps, and rotary drilling rigs in demanding coastal swamp terrain.',
+      toolsAndEquip: ['Dual Ergonomic Hydraulic Joysticks', 'Sany Global Certified Red Helmet', 'Digital In-Cabin Load Sensors', 'Tinted UV Safety Glasses'],
+      keyHighlight: 'Over 8,500 incident-free machine operating hours in coastal reclamation and foundation excavation.',
+      fieldDeployment: 'Dangote Refinery Arterial Works & Ibeju-Lekki Earthworks'
+    }
+  ]
+};
+
