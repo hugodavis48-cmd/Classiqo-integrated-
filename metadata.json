@@ -1,0 +1,6 @@
+{
+  "name": "Clasqo Integrated Constructions",
+  "description": "An advanced engineering solutions and heavy machinery leasing platform for Clasqo Integrated Nigeria Limited.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
